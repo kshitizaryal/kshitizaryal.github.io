@@ -1,0 +1,65 @@
+# Handling reading
+exclude:
+  - README.md
+  - LICENSE
+  - CNAME
+  - Gemfile
+encoding: "utf-8"
+
+# Plugins
+gems:
+  - jemoji
+  - jekyll-mentions
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# Conversion
+markdown: kramdown
+
+# Outputting
+timezone: Asia/Kathmandu
+locale: en_us
+
+# URL of site, include http://, do not include a trailing slash
+url: "https://kshitizaryal.github.io"
+
+# Site settings
+title: Kshitiz Aryal
+description: "Follow Kshitiz Aryal across the interwebs."
+# icon: "/assets/img/k-icon-white-on-teal.png"
+
+about: "My name is Kshitiz Aryal (क्षितिज अर्याल) and I'm a student living in Kathmandu, Nepal who loves surfing the web and listening music a lot. <br><br> The name Kshitiz (pronounced kShitij), a hindu name meaning horizon. A distant point at which earth and sky seem to meet."
+
+social:
+  - title: Twitter
+    url: https://twitter.com/KshitizAryal
+    fa: twitter
+
+  - title: Facebook
+    url: https://www.facebook.com/kshitiz.aryal
+    fa: facebook
+
+  - title: Instagram
+    url: https://instragram.com/considerkshitiz
+    fa: instagram
+
+  - title: Google+
+    url: https://plus.google.com/+KshitizAryal
+    fa: google-plus
+
+  - title: Tumblr
+    url: http://kshitizaryal.tumblr.com
+    fa: tumblr
+
+# Google map local location
+google_map:
+  api: "AIzaSyBRfaWsUPFLarp7efMqyne-1K7uigYPtyQ"
+  zoom: 8
+  latitude: "27.7089603"
+  longitude: "85.3261328"
+
+# Compress HTML
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
