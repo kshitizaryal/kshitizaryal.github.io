@@ -10,7 +10,7 @@
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
     <script src="https://maps.googleapis.com/maps/api/js?key={{site.google_map.api}}&sensor=false"></script>
 
-	{% if site.google_map %}
+    {% if site.google_map.api %}
     <script>
     function initialize() {
       var mapOptions = {
