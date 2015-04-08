@@ -1,0 +1,29 @@
+    <!-- jQuery -->
+    <script src="/assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="/assets/js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key={{site.google_map.api}}&sensor=false"></script>
+
+	{% if site.google_map %}
+    <script>
+    function initialize() {
+      var mapOptions = {
+        zoom: {{ site.google_map.zoom }},
+        center: new google.maps.LatLng({{ site.google_map.latitude }}, {{ site.google_map.longitude }})
+      };
+      var map = new google.maps.Map(document.getElementById('map'),
+      mapOptions);
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    (% endif %}
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/assets/js/grayscale.js"></script>
