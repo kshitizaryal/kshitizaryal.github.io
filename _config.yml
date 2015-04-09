@@ -26,9 +26,7 @@ url: "https://kshitizaryal.github.io"
 # Site settings
 title: Kshitiz Aryal
 description: "Follow Kshitiz Aryal across the interwebs."
-# icon: "/assets/img/k-icon-white-on-teal.png"
-
-about: "My name is Kshitiz Aryal (क्षितिज अर्याल) and I'm a student living in Kathmandu, Nepal who loves surfing the web and listening music a lot. <br><br> The name Kshitiz (pronounced kShitij), a hindu name meaning horizon. A distant point at which earth and sky seem to meet."
+icon: "/assets/img/k-icon-white-on-teal.png"
 
 social:
   - title: Twitter
