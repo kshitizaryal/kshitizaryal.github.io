@@ -169,7 +169,7 @@ function init() {
 
     // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
     var image = '/assets/img/map-marker.png';
-    var myLatLng = new google.maps.LatLng(27.7089604, 85.3261328);
+    var myLatLng = new google.maps.LatLng(27.6857605, 85.2690769); // Tinthana, Kathmandu, Nepal
     var beachMarker = new google.maps.Marker({
         position: myLatLng,
         map: map,
