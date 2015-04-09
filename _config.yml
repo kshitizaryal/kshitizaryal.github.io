@@ -47,6 +47,13 @@ social:
     url: http://kshitizaryal.tumblr.com
     fa: tumblr
 
+# Google Maps API Key and local location
+google_map:
+  api: "AIzaSyBRfaWsUPFLarp7efMqyne-1K7uigYPtyQ"
+  zoom: 13
+  latitude: "27.7089603"
+  longitude: "85.3261328"
+
 # Compress HTML
 compress_html:
   clippings: all
