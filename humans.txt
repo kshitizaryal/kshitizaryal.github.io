@@ -8,9 +8,8 @@ permalink: /humans.txt
 
 # TEAM
   {% for contributor in site.github.contributors %}
-  Name: {{ contributor.owner_name }}
-  Site: {{ contributor.owner_url }}
-  {% if contributor.owner_location %}Location: {{ contributor.owner_location }}{% endif %} 
+  Name: {{ contributor.login }}
+  Site: {{ contributor.html_url }}
   {% endfor %}
 # THANKS
 
