@@ -10,6 +10,7 @@ permalink: /humans.txt
   {% for contributor in site.github.contributors %}
   Name: {{ contributor.login }}
   Site: {{ contributor.html_url }}
+  {% if contributor.home_location %}Location: {{ contributor.home_location }}{% endif %} 
   {% endfor %}
 # THANKS
 
