@@ -45,6 +45,9 @@ social:
     url: http://kshitizaryal.tumblr.com
     fa: tumblr
 
+# Google Analytics ID
+google_analytics_id: "UA-62011938-1"
+
 # Google Maps API Key and local location
 google_map:
   api: "AIzaSyBRfaWsUPFLarp7efMqyne-1K7uigYPtyQ"
