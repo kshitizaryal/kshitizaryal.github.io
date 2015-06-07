@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-require 'json'
-require 'open-uri'
-versions = JSON.parse(open('https://pages.github.com/versions.json').read)
-
-gem 'github-pages', versions['github-pages']
+2 gem 'github-pages'
+3
+4 # Test the build
+5 group :test do
+6   gem 'rake'
+7   gem 'html-proofer'
+8 end
