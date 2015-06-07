@@ -4,6 +4,7 @@ exclude:
   - LICENSE
   - CNAME
   - Gemfile
+  - vendor
 encoding: "utf-8"
 
 # Plugins
