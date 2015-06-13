@@ -1,7 +1,9 @@
 language: ruby
 rvm:
   - 2.1
-script: "./script/cibuild"
+script:
+  - bundle exec jekyll build
+  - bundle exec htmlproof ./_site
 cache: bundler
 sudo: false
 env:
