@@ -1,31 +1,19 @@
 <head>
 
+    <!-- Basic page needs -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>{{ site.name }}</title>
     <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.title }}">
+    <meta name="author" content="{{ site.name }}">
 
-    <title>{{ site.title }}</title>
+    <!-- SEO -->
+    <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.url }}">
 
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico?v={{ site.github.build_revision }}">
 
-    <link rel="shortcut icon" href="/favicon.ico?v={{ site.github.build_revision }}">
-  
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=3.3.4">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/grayscale.min.css?v={{ site.github.build_revision }}">
-
-    <!-- Custom Fonts -->
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css?v=4.3.0">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic|Montserrat:400,700">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/styles.css?v={{ site.github.build_revision }}">
 
 </head>
