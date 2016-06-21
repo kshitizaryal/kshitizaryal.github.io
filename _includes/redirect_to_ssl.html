@@ -1,9 +1,0 @@
-{% if site.github.owner_name %}
-<!-- Redirect to SSL 
-    (Redirect GitHub Pages insecure http url to secure https url) -->
-<script>
-var host = "{{ site.github.owner_name | downcase | append:'.' }}{{ site.github.pages_hostname }}";
-if ((host == window.location.host) && (window.location.protocol != "https:"))
-window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
-</script>
-{% endif %}
