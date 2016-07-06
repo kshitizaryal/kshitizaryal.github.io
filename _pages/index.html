@@ -1,69 +1,53 @@
 ---
-layout: default
+layout: index
 permalink: /
 ---
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">{{ site.name }}</h1>
-                        <p class="intro-text">{{ site.description }}</p>
-                        <div id="page-scroll">
-                            <a href="#about" class="btn btn-circle page-scroll">
-                                <i class="fa fa-angle-double-down animated"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+{% assign site_author = site.author.name | default: site.author | default: site.title | default: site.name %}
+{% if site_author %}
+  {% assign site_author = site_author | smartify | strip_html | strip_newlines | escape_once %}
+{% endif %}
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About</h2>
-                <p>My name is Kshitiz Aryal (क्षितिज अर्याल) and I'm a student living in Kathmandu, Nepal who loves surfing the web and listening music a lot.<p>
-                <p>The name Kshitiz (pronounced kShitij), a hindu name meaning horizon. A distant point at which earth and sky seem to meet.</p>
-            </div>
-        </div>
-    </section>
+{% assign site_author_bio = site.author.bio | default: site.description %}
+{% if site_author_bio %}
+  {% assign site_author_bio = site_author_bio | smartify | strip_html | strip_newlines | truncate: 160 | escape_once %}
+{% endif %}
 
-    <!-- Download Section -->
-    <!-- <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Download</h2>
-                    <p>#</p>
-                    <a href="#" class="btn btn-default btn-lg">#</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
+{% assign site_author_avatar = site.author.avatar | default: site.logo.path | default: site.logo %}
+{% if site_author_avatar %}
+  {% assign site_author_avatar = site_author_avatar | escape %}
+{% endif %}
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact</h2>
-                <p>If you have any questions, comments, or would just like to say hello, please don't hesitate to drop me a line at <a href="//www.google.com/recaptcha/mailhide/d?k=01Cn4WUgCp444eQ1YJai4-JQ==&amp;c=kytZf_-LPgOIxQnNiTbKfXGthZRQvP9hPF-uV28PwVM=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501Cn4WUgCp444eQ1YJai4-JQ\75\75\46c\75kytZf_-LPgOIxQnNiTbKfXGthZRQvP9hPF-uV28PwVM\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">c...</a>@gmail.com.</p>
-                <p>Or,</p>
-				<p>Join me on these following social networks and/or websites:</p>
-                <ul class="list-inline banner-social-buttons">
-                    {% for network in site.social %}
-                    <li>
-                        <a href="{{ network.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ network.fa }} fa-fw"></i> <span class="network-name">{{ network.title }}</span></a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-    </section>
+<main class="hero-profile is-loading" role="main" itemscope itemtype="https://schema.org/Person">
 
-    <!-- Map Section -->
-    <div id="map-canvas"></div>
+  <section class="inner-wrapper">
+
+      <span class="hero-avatar-wrapper">
+        <img class="hero-avatar" itemprop="image" src="{{ site_author_avatar }}" alt="{{ site_author }}">
+      </span>
+
+      <h1 class="hero-title" itemprop="name">{{ site_author }}</h1>
+
+      <p class="hero-description" itemprop="description">{{ site_author_bio }}</p>
+
+      <ul class="hero-social">
+        {% if site.author.facebook %}<li><a itemprop="sameAs" rel="me" href="//www.facebook.com/{{ site.author.facebook }}" class="fa fa-facebook"><span class="label">Facebook</span></a></li>{% endif %}
+        {% if site.author.twitter %}<li><a itemprop="sameAs" rel="me" href="//twitter.com/{{ site.author.twitter }}" class="fa fa-twitter"><span class="label">Twitter</span></a></li>{% endif %}
+        {% if site.author.instagram %}<li><a itemprop="sameAs" rel="me" href="//instagram.com/{{ site.author.instagram }}" class="fa fa-instagram"><span class="label">Instagram</span></a></li>{% endif %}
+      </ul>
+
+  </section>
+
+  <link itemprop="url" href="/">
+
+  {% if site.author %}
+    <span class="hide" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      {% if site.author.street %}<meta itemprop="streetAddress" content="{{ site.author.street }}">{% endif %}
+      {% if site.author.locality %}<meta itemprop="addressLocality" content="{{ site.author.locality }}">{% endif %}
+      {% if site.author.region %}<meta itemprop="addressRegion" content="{{ site.author.region }}">{% endif %}
+      {% if site.author.country %}<meta itemprop="addressCountry" content="{{ site.author.country }}">{% endif %}
+      {% if site.author.postcode %}<meta itemprop="postalCode" content="{{ site.author.postcode }}">{% endif %}
+    </span><!-- /itemscope itemtype PostalAddress -->
+  {% endif %}
+
+</main>

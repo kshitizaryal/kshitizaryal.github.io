@@ -1,0 +1,34 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html lang="en" class="html">
+
+  {% include head.html %}
+
+  <body class="body is-loading">
+
+    <div class="wrapper">
+
+      {{ content }}
+
+      <footer class="site-footer is-loading">
+        {% assign site_name = site.title | default: site.name %}
+        {% if site_name %}
+          {% assign site_name = site_name | smartify | strip_html | strip_newlines | escape_once %}
+        {% endif %}
+
+        <ul class="site-footer-legal">
+          <li>&copy; {{ site_name }}</li>
+          <li>Design: <a href="https://milanaryal.com/">Milan Aryal</a></li>
+        </ul>
+      </footer>
+
+    </div><!-- /.wrapper -->
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

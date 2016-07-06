@@ -29,7 +29,9 @@ permalink: /404.html
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{ page_title }} &mdash; {{ site_name }}</title>
-    {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+    {% if page.robots %}
+      <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/styles.css?v={{ build_version }}">
     <link rel="icon" href="/favicon.ico?v={{ build_version }}">
 
