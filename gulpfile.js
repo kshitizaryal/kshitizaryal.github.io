@@ -27,36 +27,39 @@
 (function (r) {
   'use strict';
 
-  var gulp         = r('gulp'),
+  // Load plugins
+  var del          = r('del'),
+      gulp         = r('gulp'),
       autoprefixer = r('gulp-autoprefixer'),
-      clean        = r('gulp-dest-clean'),
-      minifycss    = r('gulp-minify-css'),
+      minifycss    = r('gulp-clean-css'),
       rename       = r('gulp-rename'),
       sass         = r('gulp-sass'),
       scsslint     = r('gulp-scss-lint');
 
-
-  gulp.task('clean', function () {
-    return gulp.src('./src/scss/styles.scss', { read: false })
-      .pipe(clean('./assets/css'));
+  // Clean
+  gulp.task('clean', function() {
+    return del(['assets/css']);
   });
 
+  // Test SCSS
   gulp.task('test-scss', function () {
-    return gulp.src('./src/scss/**/*.scss')
-      .pipe(scsslint({ bundleExec: false, config: './src/scss/.scss-lint.yml', reporterOutput: null }));
+    return gulp.src('src/scss/**/*.scss')
+      .pipe(scsslint({ bundleExec: false, config: 'src/scss/.scss-lint.yml', reporterOutput: null }));
   });
 
+  // Dist CSS
   gulp.task('dist-css', function () {
-    return gulp.src('./src/scss/styles.scss')
+    return gulp.src('src/scss/styles.scss')
       .pipe(sass.sync().on('error', sass.logError))
       .pipe(sass({ outputStyle: 'expanded' }))
       .pipe(autoprefixer({ browsers: ['last 2 versions', 'ie >= 9', 'Android >= 2.3']	}))
-      .pipe(gulp.dest('./assets/css'))
+      .pipe(gulp.dest('assets/css'))
+      .pipe(rename({ suffix: '.min' }))
       .pipe(minifycss({ compatibility: 'ie9', keepSpecialComments: false, advanced: false }))
-      .pipe(rename('styles.min.css'))
-      .pipe(gulp.dest('./assets/css'));
+      .pipe(gulp.dest('assets/css'));
   });
 
+  // Default task
   gulp.task('default', ['clean', 'dist-css']);
 
 })(require);
