@@ -5,5 +5,5 @@ gem 'html-proofer', :group => :test
 
 group :development do
   gem 'wdm', :platforms => [:mswin, :mingw]
-  gem 'scss-lint', :require => false
+  gem 'scss_lint', :require => false
 end
