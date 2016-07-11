@@ -1,12 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'github-pages', :group => :jekyll_plugins
+gem 'html-proofer', :group => :test
 
 group :development do
-  gem 'wdm' if Gem.win_platform?
-  gem 'scss_lint', :require => false
-end
-
-group :test do
-  gem 'html-proofer'
+  gem 'wdm', :platforms => [:mswin, :mingw]
+  gem 'scss-lint', :require => false
 end
