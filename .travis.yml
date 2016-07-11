@@ -5,15 +5,22 @@ env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
+node_js:
+  - "4"
+  - "6"
+
 sudo: false
+
+before_cache:
+  - rm -rf ./_site # Cleaning up...
 
 cache:
   bundler: true # vendor/bundle
   directories:
     - node_modules # NPM packages
 
-install:
-  - bundle install --without development
+before_install:
+#  - bundle install --without development
   - npm install
 
 before_script:
@@ -24,7 +31,7 @@ script:
   - bundle exec jekyll build # Building site...
   - bundle exec htmlproofer ./_site --only-4xx # Checking site...
 #  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
-  - rm -rf ./_site # Cleaning up...
+#  - rm -rf ./_site # Cleaning up...
 
 branches:
   only:
