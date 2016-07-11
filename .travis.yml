@@ -13,6 +13,7 @@ cache:
     - node_modules # NPM packages
 
 install:
+  - bundle install --without development
   - npm install
 
 before_script:
