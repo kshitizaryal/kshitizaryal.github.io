@@ -64,13 +64,15 @@ include: ["_pages"]
 
 # Plugins
 gems:
-#  - jekyll-feed
-#  - jekyll-github-metadata
-#  - jekyll-mentions
-#  - jekyll-redirect-from
-#  - jekyll-seo-tag
+# - jekyll-feed
+# - jekyll-gist
+  - jekyll-github-metadata
+# - jekyll-mentions
+# - jekyll-paginate
+# - jekyll-redirect-from
+# - jekyll-seo-tag
   - jekyll-sitemap
-#  - jemoji
+# - jemoji
 
 exclude:
   - README.md
