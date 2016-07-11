@@ -9,8 +9,14 @@ sudo: false
 cache: bundler
 
 script:
+  - title "Building site..."
   - bundle exec jekyll build
+  - title "Checking site..."
   - bundle exec htmlproofer ./_site --only-4xx
+  - title "Checking DNS..."
+  - bundle exec github-pages health-check
+  - title "Cleaning up..."
+  - rm -rf _site
 
 branches:
   only:
