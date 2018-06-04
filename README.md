@@ -1,12 +1,12 @@
-# Kshitiz Aryal website (kshitizaryal.github.io)
+# Kshitiz Aryal website (kshitizaryal.com.np)
 
 [![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io)
 
-The Jekyll build for [kshitizaryal.github.io](https://kshitizaryal.github.io).
+The Jekyll build for [kshitizaryal.com.np](https://kshitizaryal.com.np).
 
 Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of Kshitiz Aryal.
 
-* Site: [kshitizaryal.github.io](https://kshitizaryal.github.io)
+* Site: [kshitizaryal.github.io](https://kshitizaryal.com.np)
 * Twitter: [@KshitizAryal](https://twitter.com/KshitizAryal)
 
 ## License
