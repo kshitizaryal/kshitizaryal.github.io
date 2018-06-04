@@ -5,7 +5,7 @@
 # ----------------------------------------------------------------------
 
 # URL of site, include http(s)://, do not include a trailing slash
-url: "https://kshitizaryal.github.io"
+url: "https://kshitizaryal.com.np"
 
 name: "Kshitiz Aryal"
 description: "Follow me across the interwebs."
@@ -14,7 +14,7 @@ repository: KshitizAryal/kshitizaryal.github.io
 
 author:
   name: "Kshitiz Aryal"
-  email: "considerkshitiz@gmail.com"
+  email: "kshitizcares@gmail.com"
   uri: "https://twitter.com/MilanAryal"
   avatar: "/assets/img/k-icon-white-on-teal.png"
   bio: "Follow me across the interwebs."
@@ -22,7 +22,7 @@ author:
   twitter: KshitizAryal
   google_plus: KshitizAryal
   instagram: considerkshitiz
-  street: "Chandragiri 23"
+  street: "Chandragiri 15"
   locality: Kathmandu
   region: Bagmati
   country: Nepal
