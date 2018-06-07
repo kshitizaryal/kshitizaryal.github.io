@@ -1,34 +1,7 @@
-# Kshitiz Aryal website (kshitizaryal.com.np)
+# [Kshitiz Aryal](https://kshitizaryal.com.np)
 
-[![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io)
+[![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io) [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE) [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-green.svg)](https://twitter.com/KshitizAryal)
 
-The Jekyll build for [kshitizaryal.com.np](https://kshitizaryal.com.np).
+The uncompiled [Jekyll](https://jekyllrb.com) source code for [kshitizaryal.com.np](https://kshitizaryal.com.np).
 
 Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of Kshitiz Aryal.
-
-* Site: [kshitizaryal.github.io](https://kshitizaryal.com.np)
-* Twitter: [@KshitizAryal](https://twitter.com/KshitizAryal)
-
-## License
-
-#### The MIT License (MIT)
-
-Copyright (c) 2016 Kshitiz Aryal
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
