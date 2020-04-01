@@ -1,6 +1,6 @@
 /*!
  * Kshitiz Aryal Gulpfile (https://kshitizaryal.github.io)
- * Copyright 2016 Milan Aryal https://milanaryal.com)
+ * Copyright 2016 Milan Aryal https://milanaryal.com.np)
  * Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
  */
 
