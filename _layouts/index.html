@@ -14,15 +14,21 @@ layout: compress
       {{ content }}
 
       <footer class="site-footer is-loading">
-        {% assign site_name = site.title | default: site.name %}
-        {% if site_name %}
+
+        <ul class="site-footer-legal">
+          <li><i class="fa fa-file-code"></i>&nbsp;<a href="https://milanaryal.com.np/">Milan Aryal</a></li>
+        </ul>
+
+        <!-- {% assign site_title = site.title | default: site.name %}
+        {% if site_title %}
           {% assign site_name = site_name | smartify | strip_html | strip_newlines | escape_once %}
         {% endif %}
 
         <ul class="site-footer-legal">
-          <li>&copy; {{ site_name }}</li>
+          <li>&copy; {{ site_title }}</li>
           <li>Design: <a href="https://milanaryal.com.np/">Milan Aryal</a></li>
-        </ul>
+        </ul> -->
+
       </footer>
 
     </div><!-- /.wrapper -->

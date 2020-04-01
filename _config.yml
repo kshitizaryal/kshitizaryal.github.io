@@ -7,9 +7,9 @@
 # URL of site, include http(s)://, do not include a trailing slash
 url: "https://kshitizaryal.com.np"
 
-name: "Kshitiz Aryal"
+title: "Kshitiz Aryal"
 description: "Follow me across the interwebs."
-icon: "/assets/img/avatar.png"
+logo: "/assets/img/avatar.png"
 repository: KshitizAryal/kshitizaryal.github.io
 
 author:
