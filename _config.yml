@@ -9,24 +9,23 @@ url: "https://kshitizaryal.com.np"
 
 name: "Kshitiz Aryal"
 description: "Follow me across the interwebs."
-icon: "/assets/img/k-icon-white-on-teal.png"
+icon: "/assets/img/avatar.png"
 repository: KshitizAryal/kshitizaryal.github.io
 
 author:
   name: "Kshitiz Aryal"
-  email: "kshitizcares@gmail.com"
-  uri: "https://twitter.com/MilanAryal"
-  avatar: "/assets/img/avatar.jpg"
-  bio: "Follow me across the interwebs."
-  facebook: kshitizaryal
+#  email: "#"
+  uri: "https://twitter.com/KshitizAryal"
+  avatar: "/assets/img/avatar.png"
+  bio: "Life is like riding a bike. To keep your balance, you must keep moving."
+  facebook: KshitizAryal
   twitter: KshitizAryal
-  google_plus: KshitizAryal
   instagram: considerkshitiz
-  street: "Chandragiri 15"
-  locality: Kathmandu
-  region: Bagmati
+#  street: "#"
+#  locality: "#"
+#  region: "#"
   country: Nepal
-  postcode: 44600
+#  postcode: "#"
 
 # Google Analytics ID
 google_analytics_id: "UA-120293538-1"

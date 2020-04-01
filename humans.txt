@@ -31,4 +31,4 @@ permalink: /humans.txt
   Last updated: {{ site.time | date: '%Y/%m/%d' }}
   Language: English / Nepali
   Doctype: HTML5
-  IDE: Atom Editor, Sublime Text, Notepad++, GitHub, Photoshop, Illustrator
+  IDE: Atom Editor, Git, Photoshop, Illustrator
