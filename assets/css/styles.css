@@ -640,8 +640,8 @@ a:hover, a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2em;
-  height: 2em;
+  width: 3.4em;
+  height: 3.4em;
   color: #b6bcc0;
   text-align: center;
   border: solid 1px #b6bcc0;
@@ -653,22 +653,26 @@ a:hover, a:focus {
   border: solid 1px #ff7496;
 }
 
+.hero-social .a:hover .svg {
+  fill: #fff;
+}
+
 .hero-social .a.icon-facebook:hover {
   color: #3b5998;
   background-color: #3b5998;
-  border: solid 1px #3b5998;
+  border: solid 1px #fff;
 }
 
 .hero-social .a.icon-twitter:hover {
   color: #55acee;
   background-color: #55acee;
-  border: solid 1px #55acee;
+  border: solid 1px #fff;
 }
 
 .hero-social .a.icon-instagram:hover {
   color: #833ab4;
   background-color: #833ab4;
-  border: solid 1px #833ab4;
+  border: solid 1px #fff;
 }
 
 .hero-social .a .svg {
