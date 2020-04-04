@@ -637,12 +637,11 @@ a:hover, a:focus {
 }
 
 .hero-social .a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 2em;
   height: 2em;
-  font-size: 1.5em;
-  line-height: 2em;
-  letter-spacing: 0;
   color: #b6bcc0;
   text-align: center;
   border: solid 1px #b6bcc0;

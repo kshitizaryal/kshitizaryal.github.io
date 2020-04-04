@@ -194,12 +194,14 @@
   }
 
   .a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 2em;
     height: 2em;
-    font-size: 1.5em; // 1.25em;
-    line-height: 2em;
-    letter-spacing: 0;
+    // font-size: 1.5em; // 1.25em;
+    // line-height: 2em;
+    // letter-spacing: 0;
     color: darken(#c8cccf, 6.5%); // #c8cccf;
     text-align: center;
     // text-decoration: none;
