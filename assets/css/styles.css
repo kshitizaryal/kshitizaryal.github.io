@@ -50,8 +50,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -236,8 +235,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -271,8 +269,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -399,8 +396,7 @@ table {
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .clearfix::before,
@@ -417,7 +413,6 @@ a {
   color: inherit;
   text-decoration: none;
   background-color: transparent;
-  -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
@@ -3305,13 +3300,10 @@ a:hover, a:focus {
   word-wrap: break-word;
   background-attachment: fixed;
   background-color: #fff;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.44)), to(rgba(0, 0, 0, 0.44))), url("/assets/img/hero.jpg");
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url("/assets/img/hero.jpg");
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url("/assets/img/hero.jpg");
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
-  -webkit-background-size: cover, cover;
-          background-size: cover, cover;
+  background-size: cover, cover;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -3327,7 +3319,6 @@ a:hover, a:focus {
   content: "";
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
   transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
 }
 
@@ -3339,15 +3330,10 @@ a:hover, a:focus {
 .wrapper {
   position: relative;
   z-index: 2;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 100%;
   padding: 1.25rem;
   -webkit-overflow-scrolling: touch;
@@ -3361,30 +3347,23 @@ a:hover, a:focus {
 .hero-profile {
   position: relative;
   z-index: 1;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
   text-align: center;
   cursor: default;
   background-color: rgba(255, 255, 255, 0.929);
   border-radius: .375rem;
   opacity: .99;
-  -webkit-transform: perspective(1000px) rotateX(0deg);
-          transform: perspective(1000px) rotateX(0deg);
-  -webkit-transition: all 1s ease 0s;
+  transform: perspective(1000px) rotateX(0deg);
   transition: all 1s ease 0s;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 .hero-profile.is-loading {
   opacity: 0;
-  -webkit-transform: perspective(1000px) rotateX(15deg);
-          transform: perspective(1000px) rotateX(15deg);
+  transform: perspective(1000px) rotateX(15deg);
 }
 
 .inner-wrapper {
@@ -3518,7 +3497,6 @@ a:hover, a:focus {
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
   cursor: default;
-  -webkit-transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
   transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
 }
 
@@ -3559,12 +3537,9 @@ a:hover, a:focus {
 }
 
 .error-page {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
@@ -3572,8 +3547,7 @@ a:hover, a:focus {
 
 .error-page-container {
   padding: 2em;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   -webkit-animation: fade-in 2s;
           animation: fade-in 2s;
 }

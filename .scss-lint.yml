@@ -24,8 +24,8 @@ linters:
     enabled: true
     convention: zero # or `none`
     exclude:
-      - _normalize.scss
-      - font-awesome/**/*.scss
+      - src/scss/_normalize.scss
+      - src/scss/font-awesome/**/*.scss
 
   ChainedClasses:
     enabled: false
@@ -39,9 +39,9 @@ linters:
   Comment:
     enabled: true
     exclude:
-      - _normalize.scss
-      - _font-awesome.scss
-      - styles.scss
+      - src/scss/_normalize.scss
+      - src/scss/_font-awesome.scss
+      - src/scss/styles.scss
     style: silent
 
   DebugStatement:
@@ -106,8 +106,8 @@ linters:
     enabled: true
     style: exclude_zero # or 'include_zero'
     exclude:
-      - _normalize.scss
-      - font-awesome/**/*.scss
+      - src/scss/_normalize.scss
+      - src/scss/font-awesome/**/*.scss
 
   MergeableSelector:
     enabled: false
@@ -137,8 +137,8 @@ linters:
     min_properties: 2
     separate_groups: false
     exclude:
-      - _normalize.scss
-      - font-awesome/**/*.scss
+      - src/scss/_normalize.scss
+      - src/scss/font-awesome/**/*.scss
     order: recess
 
   PropertySpelling:
@@ -252,8 +252,8 @@ linters:
     additional_identifiers: []
     excluded_identifiers: []
     exclude:
-      - _normalize.scss
-      - font-awesome/**/*.scss
+      - src/scss/_normalize.scss
+      - src/scss/font-awesome/**/*.scss
 
   ZeroUnit:
     enabled: true

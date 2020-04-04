@@ -39,7 +39,7 @@ const scsslint = require('gulp-scss-lint');
 // Test SCSS
 exports.testStyles = function () {
   return gulp.src('src/scss/**/*.scss')
-    .pipe(scsslint({ bundleExec: false, config: 'src/scss/.scss-lint.yml', reporterOutput: null }));
+    .pipe(scsslint({ bundleExec: false, config: '.scss-lint.yml', reporterOutput: null }));
 }
 
 // Clean
@@ -52,10 +52,10 @@ var distStyles = function () {
   return gulp.src('src/scss/styles.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(sass({ outputStyle: 'expanded' }))
-    .pipe(autoprefixer({ overrideBrowserslist: ['> 0.5%', 'last 2 versions', 'Firefox ESR', 'ie >= 9', 'Android >= 2.3', 'not dead']	}))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss({ compatibility: 'ie9', keepSpecialComments: false, advanced: false }))
+    .pipe(minifycss({ discardComments: { removeAll: true } }))
     .pipe(gulp.dest('assets/css'));
 }
 
