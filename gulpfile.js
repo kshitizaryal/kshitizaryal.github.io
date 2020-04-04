@@ -1,6 +1,6 @@
 /*!
- * Kshitiz Aryal Gulpfile (https://kshitizaryal.github.io)
- * Copyright 2016 Milan Aryal https://milanaryal.com.np)
+ * Kshitiz Aryal Gulpfile (https://kshitizaryal.com.np)
+ * Copyright 2020 Milan Aryal https://milanaryal.com.np)
  * Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
  */
 
@@ -19,47 +19,53 @@
  //   $ gulp
  //
  // - Test SCSS
- //   $ gulp test-scss
+ //   $ gulp testStyles
  //
  // - Only distribute CSS
- //    $ gulp dist-css
+ //    $ gulp distStyles
 
-(function (r) {
-  'use strict';
+'use strict';
 
-  // Load plugins
-  var del          = r('del'),
-      gulp         = r('gulp'),
-      autoprefixer = r('gulp-autoprefixer'),
-      minifycss    = r('gulp-clean-css'),
-      rename       = r('gulp-rename'),
-      sass         = r('gulp-sass'),
-      scsslint     = r('gulp-scss-lint');
+// Load plugins
+const gulp = require('gulp');
+const del = require('del');
+const autoprefixer = require('gulp-autoprefixer');
+const minifycss = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass');
+sass.compiler = require('node-sass');
+const scsslint = require('gulp-scss-lint');
 
-  // Clean
-  gulp.task('clean', function() {
-    return del(['assets/css']);
-  });
+// Test SCSS
+exports.testStyles = function () {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe(scsslint({ bundleExec: false, config: 'src/scss/.scss-lint.yml', reporterOutput: null }));
+}
 
-  // Test SCSS
-  gulp.task('test-scss', function () {
-    return gulp.src('src/scss/**/*.scss')
-      .pipe(scsslint({ bundleExec: false, config: 'src/scss/.scss-lint.yml', reporterOutput: null }));
-  });
+// Clean
+var clean = function () {
+  return del(['assets/css']);
+}
 
-  // Dist CSS
-  gulp.task('dist-css', function () {
-    return gulp.src('src/scss/styles.scss')
-      .pipe(sass.sync().on('error', sass.logError))
-      .pipe(sass({ outputStyle: 'expanded' }))
-      .pipe(autoprefixer({ browsers: ['last 2 versions', 'ie >= 9', 'Android >= 2.3']	}))
-      .pipe(gulp.dest('assets/css'))
-      .pipe(rename({ suffix: '.min' }))
-      .pipe(minifycss({ compatibility: 'ie9', keepSpecialComments: false, advanced: false }))
-      .pipe(gulp.dest('assets/css'));
-  });
+// Dist CSS
+var distStyles = function () {
+  return gulp.src('src/scss/styles.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }))
+    .pipe(autoprefixer({ overrideBrowserslist: ['> 0.5%', 'last 2 versions', 'Firefox ESR', 'ie >= 9', 'Android >= 2.3', 'not dead']	}))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(minifycss({ compatibility: 'ie9', keepSpecialComments: false, advanced: false }))
+    .pipe(gulp.dest('assets/css'));
+}
 
-  // Default task
-  gulp.task('default', ['clean', 'dist-css']);
+var build = gulp.series(clean, distStyles);
 
-})(require);
+// Default task
+exports.default = build;
+
+// Watch changes
+exports.watch = function () {
+  // Watch .scss files
+  gulp.watch('src/scss/**/*.scss', build);
+}
