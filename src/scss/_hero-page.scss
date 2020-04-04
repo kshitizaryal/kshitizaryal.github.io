@@ -193,7 +193,7 @@
     vertical-align: middle;
   }
 
-  .fa {
+  .a {
     display: block;
     width: 2em;
     height: 2em;
@@ -211,19 +211,30 @@
       border: solid 1px #ff7496;
     }
 
-    &.fa-facebook:hover {
+    &.icon-facebook:hover {
       color: $social-facebook-color;
+      background-color: $social-facebook-color;
       border: solid 1px $social-facebook-color;
     }
 
-    &.fa-twitter:hover {
+    &.icon-twitter:hover {
       color: $social-twitter-color;
+      background-color: $social-twitter-color;
       border: solid 1px $social-twitter-color;
     }
 
-    &.fa-instagram:hover {
+    &.icon-instagram:hover {
       color: $social-instagram-color;
+      background-color: $social-instagram-color;
       border: solid 1px $social-instagram-color;
+    }
+
+    .svg {
+      display: block;
+      width: 60%;
+      height: 60%;
+      transition: fill .25s ease;
+      fill: currentColor;
     }
 
     .label {

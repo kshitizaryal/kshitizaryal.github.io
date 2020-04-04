@@ -35,11 +35,23 @@ const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const scsslint = require('gulp-scss-lint');
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
 
 // Test SCSS
 exports.testStyles = function () {
   return gulp.src('src/scss/**/*.scss')
     .pipe(scsslint({ bundleExec: false, config: '.scss-lint.yml', reporterOutput: null }));
+}
+
+// Process and minify SVG icons
+exports.buildIcons = function () {
+  return gulp.src('src/svgs/**/*.svg', { base: 'src/icons' })
+    .pipe(svgmin())
+    .pipe(rename({prefix: 'icon-'}))
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('assets/icons'));
 }
 
 // Clean
@@ -55,7 +67,7 @@ var distStyles = function () {
     .pipe(autoprefixer())
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss({ discardComments: { removeAll: true } }))
+    .pipe(minifycss({ level: { 1: { specialComments: false } } }))
     .pipe(gulp.dest('assets/css'));
 }
 
