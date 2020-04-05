@@ -734,6 +734,10 @@ a:hover, a:focus {
   border-left: solid 1px rgba(255, 255, 255, 0.5);
 }
 
+.footer-x {
+  font-size: .6em;
+}
+
 .error-page {
   display: flex;
   align-items: center;
