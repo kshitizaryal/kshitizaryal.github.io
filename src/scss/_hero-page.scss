@@ -203,19 +203,10 @@
     // line-height: 2em;
     // letter-spacing: 0;
     color: darken(#c8cccf, 6.5%); // #c8cccf;
-    text-align: center;
+    // text-align: center;
     // text-decoration: none;
     border: solid 1px darken(#c8cccf, 6.5%);
     border-radius: 100%;
-
-    &:hover {
-      color: #ff7496;
-      border: solid 1px #ff7496;
-
-      .svg {
-        fill: #fff;
-      }
-    }
 
     &.icon-facebook:hover {
       color: $social-facebook-color;
@@ -241,6 +232,12 @@
       height: 60%;
       transition: fill .25s ease;
       fill: currentColor;
+    }
+
+    &:hover {
+      .svg {
+        fill: #fff;
+      }
     }
 
     .label {

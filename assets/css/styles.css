@@ -631,18 +631,8 @@ a:hover, a:focus {
   width: 3.4em;
   height: 3.4em;
   color: #b6bcc0;
-  text-align: center;
   border: solid 1px #b6bcc0;
   border-radius: 100%;
-}
-
-.hero-social .a:hover {
-  color: #ff7496;
-  border: solid 1px #ff7496;
-}
-
-.hero-social .a:hover .svg {
-  fill: #fff;
 }
 
 .hero-social .a.icon-facebook:hover {
@@ -669,6 +659,10 @@ a:hover, a:focus {
   height: 60%;
   transition: fill .25s ease;
   fill: currentColor;
+}
+
+.hero-social .a:hover .svg {
+  fill: #fff;
 }
 
 .hero-social .a .label {
