@@ -29,14 +29,23 @@
 // Load plugins
 const gulp = require('gulp');
 const del = require('del');
+const rename = require('gulp-rename');
+const header = require('gulp-header');
+const pkg = require('./package.json');
 const autoprefixer = require('gulp-autoprefixer');
 const minifycss = require('gulp-clean-css');
-const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const scsslint = require('gulp-scss-lint');
-const svgstore = require('gulp-svgstore');
-const svgmin = require('gulp-svgmin');
+
+// Banner template for files header
+var banner = ['/*!',
+  ' * <%= pkg.title %> (<%= pkg.url %>)',
+  ' * Copyright ' + new Date().getFullYear() + ' <%= pkg.author %> (<%= pkg.author_url %>)',
+  ' * Licensed under <%= pkg.license %> (<%= pkg.license_url %>)',
+  ' */',
+  '\n'
+].join('\n');
 
 // Test SCSS
 exports.testStyles = function () {
@@ -44,17 +53,7 @@ exports.testStyles = function () {
     .pipe(scsslint({ bundleExec: false, config: '.scss-lint.yml', reporterOutput: null }));
 }
 
-// Process and minify SVG icons
-exports.buildIcons = function () {
-  return gulp.src('src/svgs/**/*.svg', { base: 'src/icons' })
-    .pipe(svgmin())
-    .pipe(rename({prefix: 'icon-'}))
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('assets/icons'));
-}
-
-// Clean
+// Clean dist CSS assets
 var clean = function () {
   return del(['assets/css']);
 }
@@ -65,9 +64,11 @@ var distStyles = function () {
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(autoprefixer())
+    .pipe(header(banner, { pkg : pkg }))
     .pipe(gulp.dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss({ level: { 1: { specialComments: false } } }))
+    .pipe(header(banner, { pkg : pkg }))
     .pipe(gulp.dest('assets/css'));
 }
 
