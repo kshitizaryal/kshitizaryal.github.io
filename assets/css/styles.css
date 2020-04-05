@@ -426,24 +426,11 @@ a:hover, a:focus {
   display: none !important;
 }
 
-.svg-icon {
-  position: relative;
-  display: inline-flex;
-  align-self: center;
+.icon {
   width: 1em;
   height: 1em;
-  line-height: 1;
+  vertical-align: -.125em;
   fill: currentColor;
-}
-
-.svg-icon .svg {
-  width: 1em;
-  height: 1em;
-}
-
-.svg-icon.svg-baseline .svg {
-  position: absolute;
-  bottom: -.125em;
 }
 
 .html {
