@@ -3,7 +3,6 @@
  * Copyright 2020 Milan Aryal (https://milanaryal.com.np)
  * Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
  */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -427,8 +426,11 @@ a:hover, a:focus {
 }
 
 .icon {
+  display: inline-block;
   width: 1em;
   height: 1em;
+  font-size: inherit;
+  color: inherit;
   vertical-align: -.125em;
   fill: currentColor;
 }

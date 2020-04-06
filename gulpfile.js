@@ -44,8 +44,7 @@ var banner = ['/*!',
   ' * Copyright ' + new Date().getFullYear() + ' <%= pkg.author %> (<%= pkg.author_url %>)',
   ' * Licensed under <%= pkg.license %> (<%= pkg.license_url %>)',
   ' */',
-  '\n'
-].join('\n');
+  ''].join('\n');
 
 // Test SCSS
 exports.testStyles = function () {
