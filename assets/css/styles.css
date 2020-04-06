@@ -717,10 +717,6 @@ a:hover, a:focus {
   border-left: solid 1px rgba(255, 255, 255, 0.5);
 }
 
-.footer-x {
-  font-size: .6em;
-}
-
 .error-page {
   display: flex;
   align-items: center;
@@ -786,4 +782,13 @@ a:hover, a:focus {
 .error-page-message-small a:hover, .error-page-message-small a:active {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: underline;
+}
+
+.site-footer-legal {
+  font-size: 6em;
+}
+
+.footer-x {
+  margin: 0 1px;
+  font-size: .9em;
 }
