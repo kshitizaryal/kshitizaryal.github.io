@@ -12,7 +12,6 @@ const del = require('del');
 const rename = require('gulp-rename');
 const header = require('gulp-header');
 const pkg = require('./package.json');
-const scsslint = require('gulp-scss-lint');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const postcss = require('gulp-postcss');
@@ -28,28 +27,22 @@ var banner = ['/*!',
   ' */',
   ''].join('\n');
 
-// Test SCSS
-exports.testSCSS = function () {
-  return src('src/scss/**/*.scss')
-    .pipe(scsslint({ bundleExec: false, config: '.scss-lint.yml', reporterOutput: null }));
-}
-
 // Clean dist CSS assets
 var clean = function () {
-  return del(['assets/css']);
+  return del(['assets/css/']);
 }
 
 // Dist CSS
 var css = function () {
-  return src('src/scss/styles.scss')
+  return src('src/scss/main.scss')
     .pipe(header(banner, { pkg : pkg }))
     .pipe(sass.sync({ precision: 6, outputStyle: 'expanded' }).on('error', sass.logError))
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(postcss([ autoprefixer({ cascade: false }) ]))
     .pipe(dest('assets/css'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(postcss([ cssnano(), discardComments({ removeAll: true }) ]))
     .pipe(header(banner, { pkg : pkg }))
-    .pipe(dest('assets/css'));
+    .pipe(dest('assets/css/'));
 }
 
 var build = series(clean, css);

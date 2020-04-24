@@ -1,10 +1,16 @@
 ---
-layout: null
-permalink: /humans.txt
----
-
 # humanstxt.org/
 # The humans responsible & technology colophon
+
+layout: null
+---
+
+ ____  __.       .__    .__  __  .__            _____                       .__
+|    |/ _|  _____|  |__ |__|/  |_|__|_______   /  _  \_______ ___.__._____  |  |
+|      <   /  ___/  |  \|  \   __\  \___   /  /  /_\  \_  __ <   |  |\__  \ |  |
+|    |  \  \___ \|   Y  \  ||  | |  |/    /  /    |    \  | \/\___  | / __ \|  |__
+|____|__ \/____  >___|  /__||__| |__/_____ \ \____|__  /__|   / ____|(____  /____/
+        \/     \/     \/                  \/         \/       \/          \/
 
 # TEAM
   {% for contributor in site.github.contributors %}
@@ -31,4 +37,4 @@ permalink: /humans.txt
   Last updated: {{ site.time | date: '%Y/%m/%d' }}
   Language: English / Nepali
   Doctype: HTML5
-  IDE: Atom Editor, Git, Gulp.JS, Photoshop, Illustrator
+  IDE: Visual Studio Code, Atom Editor

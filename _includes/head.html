@@ -14,8 +14,14 @@
   <meta property="og:site_title" content="{{ site_title }}">
   <meta property="og:url" content="{{ page_url }}">
   <meta property="og:description" content="{{ page_description }}">
-
   <meta property="og:image" content="{{ site_logo }}">
+  {% if site.facebook.admins %}
+  <meta property="fb:admins" content="{{ site.facebook.admins }}">
+  {% endif %}
+  <meta name="twitter:card" content="summary">
+  {% if site.author.twitter %}
+  <meta name="twitter:site" content="@{{ site.twitter.username | remove:'@' }}">
+  {% endif %}
 
   <!-- SEO -->
   {% if page.robots %}
@@ -25,6 +31,6 @@
   <link rel="canonical" href="{{ page_url }}">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/styles.min.css?v={{ build_version }}">
+  <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}">
 
 </head>

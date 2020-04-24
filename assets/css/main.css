@@ -38,8 +38,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
+  margin: .67em 0;
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -87,7 +87,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -466,16 +466,16 @@ a:hover, a:focus {
 }
 
 .body {
-  height: 100%;
   min-width: 320px;
+  height: 100%;
   overflow-x: hidden;
   line-height: 1;
   word-wrap: break-word;
-  background-attachment: fixed;
   background-color: #fff;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.44)), url("/assets/img/hero.jpg");
-  background-position: center, center;
   background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
+  background-position: center, center;
   background-size: cover, cover;
   -webkit-overflow-scrolling: touch;
 }
@@ -488,24 +488,24 @@ a:hover, a:focus {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: #c2d0d7;
-  content: "";
-  opacity: 0;
   visibility: hidden;
-  transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
+  content: "";
+  background-color: #c2d0d7;
+  opacity: 0;
+  transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
 }
 
 .body.is-loading::before {
-  opacity: 1;
   visibility: visible;
+  opacity: 1;
 }
 
 .wrapper {
   position: relative;
   z-index: 2;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   min-height: 100%;
   padding: 1.25rem;
@@ -529,8 +529,8 @@ a:hover, a:focus {
   background-color: rgba(255, 255, 255, 0.929);
   border-radius: .375rem;
   opacity: .99;
-  transform: perspective(1000px) rotateX(0deg);
   transition: all 1s ease 0s;
+  transform: perspective(1000px) rotateX(0deg);
   transform-origin: 50% 50%;
 }
 
@@ -595,8 +595,8 @@ a:hover, a:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: 0;
   color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0;
 }
 
 .hero-description {
@@ -608,8 +608,8 @@ a:hover, a:focus {
   font-style: normal;
   font-weight: 400;
   line-height: 1.4;
-  letter-spacing: 0;
   color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0;
 }
 
 .hero-social {
@@ -678,12 +678,12 @@ a:hover, a:focus {
   color: rgba(255, 255, 255, 0.75);
   text-align: center;
   cursor: default;
-  transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
+  transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
 }
 
 .site-footer.is-loading {
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
 }
 
 .site-footer-legal {
@@ -692,8 +692,8 @@ a:hover, a:focus {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: .7em;
-  letter-spacing: .1em;
   text-transform: uppercase;
+  letter-spacing: .1em;
   list-style: none;
 }
 
@@ -730,7 +730,7 @@ a:hover, a:focus {
   padding: 2em;
   transform: translateZ(0);
   -webkit-animation: fade-in 2s;
-          animation: fade-in 2s;
+  animation: fade-in 2s;
 }
 
 .error-page-message {
@@ -739,8 +739,8 @@ a:hover, a:focus {
   font-style: normal;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -.04em;
   color: rgba(0, 0, 0, 0.8);
+  letter-spacing: -.04em;
 }
 
 @media (min-width: 768px) {
@@ -749,37 +749,37 @@ a:hover, a:focus {
   }
 }
 
-.error-page-message-lead {
+.error-page-message--lead {
   margin-bottom: 10px;
   font-size: 32px;
 }
 
 @media (min-width: 768px) {
-  .error-page-message-lead {
+  .error-page-message--lead {
     font-size: 60px;
   }
 }
 
-.error-page-message-small {
+.error-page-message--small {
   margin-top: 10px;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: -.02em;
   color: rgba(0, 0, 0, 0.44);
+  letter-spacing: -.02em;
 }
 
 @media (min-width: 768px) {
-  .error-page-message-small {
+  .error-page-message--small {
     font-size: 18px;
   }
 }
 
-.error-page-message-small a {
+.error-page-message--small a {
   color: rgba(0, 0, 0, 0.44);
   text-decoration: underline;
 }
 
-.error-page-message-small a:hover, .error-page-message-small a:active {
+.error-page-message--small a:hover, .error-page-message--small a:active {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: underline;
 }

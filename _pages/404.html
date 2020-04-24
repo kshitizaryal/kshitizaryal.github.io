@@ -3,7 +3,7 @@ layout: compress
 title: "Page not found"
 robots: "noindex, follow"
 sitemap: false
-permalink: /404.html
+permalink: "/404.html"
 ---
 
 <!doctype html>
@@ -19,7 +19,7 @@ permalink: /404.html
     {% if page.robots %}
       <meta name="robots" content="{{ page.robots }}">
     {% endif %}
-    <link rel="stylesheet" href="/assets/css/styles.css?v={{ build_version }}">
+    <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}">
 
   </head>
 
@@ -28,9 +28,9 @@ permalink: /404.html
     <!-- 404 main content -->
     <div class="error-page">
       <div class="error-page-container clearfix">
-        <div class="error-page-message error-page-message-lead">404</div>
+        <div class="error-page-message error-page-message--lead">404</div>
         <div class="error-page-message">Sorry, but nothing exists here.</div>
-        <div class="error-page-message error-page-message-small">Head back to <a href="/">homepage</a>.</div>
+        <div class="error-page-message error-page-message--small">Head back to <a href="/">homepage</a>.</div>
       </div><!-- /.error-page-container .clearfix -->
     </div><!-- /.error-page -->
 

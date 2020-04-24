@@ -9,8 +9,8 @@
 @import "mixins";
 
 // Core CSS
-@import "normalize";
-@import "reboot";
+@import "vendor/normalize";
+@import "vendor/reboot";
 @import "svg-icons";
 @import "hero-page";
 @import "error-page";
