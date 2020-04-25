@@ -1,5 +1,5 @@
 language: ruby
-rvm: 2.4.2
+rvm: 2.5.3
 sudo: false
 env:
   global:
@@ -22,10 +22,10 @@ before_install:
 #  - bundle install --without development
 
 before_script:
-  - npm install -g gulp
+  - npm install
 
 script:
-  - gulp
+  - npm run build
   - bundle exec jekyll build --config _config.yml,_config_test.yml # Building site...
 #  - bundle exec htmlproofer ./_site --only-4xx # Checking site...
 #  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)

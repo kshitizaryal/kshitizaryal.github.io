@@ -12,27 +12,23 @@ layout: null
 |____|__ \/____  >___|  /__||__| |__/_____ \ \____|__  /__|   / ____|(____  /____/
         \/     \/     \/                  \/         \/       \/          \/
 
-# TEAM
+/* TEAM */
   {% for contributor in site.github.contributors %}
   Name: {{ contributor.login }}
   Site: {{ contributor.html_url }}
   {% endfor %}
-# THANKS
+/* THANKS */
 
-  GitHub
-  Jekyll
-  Bootstrap
-  HTML5 Boilerplate
-  Google Fonts
-  Font Awesome
-  Other great open source project helped to build this site.
+  GitHub, Jekyll, HTML5 Boilerplate, Bootstrap, Google Fonts, Font Awesome,
+  and other great open source projects developers without them this project
+  is not possible.
 
-# TECHNOLOGY COLOPHON
+/* TECHNOLOGY COLOPHON */
 
   Standards: HTML5, CSS3
   Components: {% for dependency in site.github.versions %}{{ dependency[0] }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}
 
-# SITE
+/* SITE */
 
   Last updated: {{ site.time | date: '%Y/%m/%d' }}
   Language: English / Nepali

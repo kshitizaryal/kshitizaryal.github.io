@@ -1,11 +1,11 @@
 ---
-layout: null
-permalink: /robots.txt
----
-
 # robotstxt.org/
 # The robots exclusion protocol
+
+layout: null
+---
 
 User-agent: *
 Disallow:
 Sitemap: {{ site.url }}/sitemap.xml
+Host: {{ site.url | remove:'https://' | remove:'http://' }}

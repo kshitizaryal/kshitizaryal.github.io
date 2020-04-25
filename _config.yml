@@ -1,5 +1,8 @@
 # Jekyll config file http://jekyllrb.com/docs/configuration/
 
+# Coding guide
+# camelCase for JavaScript, underscores for Liquid tag, and hyphens for CSS.
+
 # ----------------------------------------------------------------------
 # | Site settings                                                      |
 # ----------------------------------------------------------------------
