@@ -87,7 +87,7 @@ function browserSyncReload(done) {
 // Watch changes
  function watchFiles () {
   // Watch .scss files
-  watch('src/scss/**/*.scss', series(clean, css));
+  watch('src/scss/**/*.scss', series(clean, css, site, browserSyncReload));
   // Watch site
   watch([
     '_includes/**',
@@ -99,4 +99,4 @@ function browserSyncReload(done) {
   ], series(site, browserSyncReload));
 }
 
-exports.watch = series(site, parallel(browserSync, watchFiles));
+exports.watch = series(clean, css, site, parallel(browserSync, watchFiles));

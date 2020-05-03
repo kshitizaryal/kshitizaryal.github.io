@@ -94,9 +94,9 @@
   max-width: 100%;
   text-align: center;
   cursor: default;
-  background-color: rgba(255, 255, 255, .929);
-  border-radius: .375rem;
-  opacity: .99;
+  background-color: rgba(255, 255, 255, .929); //.929
+  border-radius: 4px; // .375rem;
+  // opacity: .95;
   transition: all 1s ease 0s;
   transform: perspective(1000px) rotateX(0deg);
   transform-origin: 50% 50%;
@@ -108,13 +108,15 @@
 }
 
 .inner-wrapper {
-  width: 23rem;
   max-width: 100%;
-  padding: 3.125rem 2.5rem;
+  width: 23rem;
+  // padding: 3.125rem 2.5rem;
+  padding: 3.125rem 2.5rem 2.5rem;
   overflow-x: hidden;
 
   @media (max-width: 736px) {
-    padding: 3rem 2rem;
+    // padding: 3rem 2rem;
+    padding: 3rem 2rem 2rem;
   }
 
   > :first-child {
@@ -138,18 +140,27 @@
   position: relative;
   display: block;
   max-width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: -3em;
+    z-index: -1;
+    display: block;
+    width: calc(100% + 6em);
+    height: 1px;
+    content: "";
+    background: #c8cccf;
+  }
 }
 
-.hero-avatar {
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-}
-
-.hero-avatar {
+.hero-avatar-img {
+  display: block;
   width: 7rem;
+  margin: 0 auto;
   border-radius: 100%;
+  // box-shadow: 0 0 0 1.5em rgba(255, 255, 255, .929);
 }
 
 .hero-title {
@@ -157,12 +168,12 @@
   right: 0;
   left: 0;
   font-family: $theme-font-family-base;
-//  font-size: 2em;
-  font-size: 2.22em;
+  font-size: 2em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.2;
-  color: rgba(0,0,0,.8);
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0 1px rgba(0, 0, 0, .002);
   letter-spacing: 0;
 }
 
@@ -175,7 +186,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: 1.4;
-  color: rgba(0,0,0,.6);
+  color: rgba(0, 0, 0, .6);
+  text-shadow: 0 1px rgba(0, 0, 0, .001);
   letter-spacing: 0;
 }
 
@@ -198,8 +210,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.4em;
-    height: 3.4em;
+    width: 3rem;
+    height: 3rem;
+    // width: 3.4em;
+    // height: 3.4em;
     // font-size: 1.5em; // 1.25em;
     // line-height: 2em;
     // letter-spacing: 0;
@@ -229,8 +243,8 @@
 
     svg {
       display: block;
-      width: 60%;
-      height: 60%;
+      width: 55%;
+      height: 55%;
       transition: fill .25s ease;
       fill: currentColor;
     }
