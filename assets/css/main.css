@@ -626,7 +626,7 @@ a:hover, a:focus {
   vertical-align: middle;
 }
 
-.hero-social .a {
+.hero-social a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -637,25 +637,25 @@ a:hover, a:focus {
   border-radius: 100%;
 }
 
-.hero-social .a.icon-facebook:hover {
+.hero-social a.icon-facebook:hover {
   color: #3b5998;
   background-color: #3b5998;
   border: solid 1px #fff;
 }
 
-.hero-social .a.icon-twitter:hover {
+.hero-social a.icon-twitter:hover {
   color: #55acee;
   background-color: #55acee;
   border: solid 1px #fff;
 }
 
-.hero-social .a.icon-instagram:hover {
+.hero-social a.icon-instagram:hover {
   color: #833ab4;
   background-color: #833ab4;
   border: solid 1px #fff;
 }
 
-.hero-social .a .svg {
+.hero-social a svg {
   display: block;
   width: 60%;
   height: 60%;
@@ -663,11 +663,11 @@ a:hover, a:focus {
   fill: currentColor;
 }
 
-.hero-social .a:hover .svg {
+.hero-social a:hover svg {
   fill: #fff;
 }
 
-.hero-social .a .label {
+.hero-social a .label {
   display: none;
 }
 

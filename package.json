@@ -21,6 +21,7 @@
     "build": "gulp",
     "watch": "gulp watch",
     "test-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
+    "jekyll-build": "bundle exec jekyll build --config _config.yml,_config_dev.yml",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",

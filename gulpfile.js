@@ -11,13 +11,19 @@ const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const rename = require('gulp-rename');
 const header = require('gulp-header');
-const pkg = require('./package.json');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const discardComments = require('postcss-discard-comments');
+const browsersync = require("browser-sync").create();
+
+// https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-shell-commands.md
+var cp = require('child_process');
+
+// Load package.json for banner
+const pkg = require('./package.json');
 
 // Banner template for files header
 var banner = ['/*!',
@@ -50,8 +56,47 @@ var build = series(clean, css);
 // Default task
 exports.default = build;
 
-// Watch changes
-exports.watch = function () {
-  // Watch .scss files
-  watch('src/scss/**/*.scss', build);
+// Gulp Watch
+//
+// Jekyll & BrowserSync
+
+function site (done) {
+  browsersync.notify('Compiling Jekyll, please wait!');
+  return cp.spawn('npm', [ 'run', 'jekyll-build' ], { stdio: 'inherit' })
+    .on('close', done);
 }
+
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: './_site'
+    },
+    port: 3000,
+    open: false
+  });
+  done();
+}
+
+// BrowserSync reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
+
+// Watch changes
+ function watchFiles () {
+  // Watch .scss files
+  watch('src/scss/**/*.scss', series(clean, css));
+  // Watch site
+  watch([
+    '_includes/**',
+    '_layouts/**',
+    '_pages/**',
+    'assets/**',
+    '!src',
+    '!node_modules'
+  ], series(site, browserSyncReload));
+}
+
+exports.watch = series(site, parallel(browserSync, watchFiles));
