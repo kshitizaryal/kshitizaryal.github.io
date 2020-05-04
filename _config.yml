@@ -11,7 +11,8 @@
 url: "https://kshitizaryal.com.np"
 
 title: "Kshitiz Aryal"
-description: "Follow me across the interwebs."
+tagline: "Follow me across the interwebs."
+description: "Hey -- this is Kshitiz Aryal, who loves traveling new places and listening music a lot."
 logo: "/assets/img/avatar.png"
 repository: "KshitizAryal/kshitizaryal.github.io"
 branch: "master"

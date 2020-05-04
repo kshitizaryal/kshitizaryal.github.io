@@ -2,37 +2,30 @@
 // Hero page
 //
 
-.html {
+html {
+
+  font-size: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  html, body {
+    min-width: 320px;
+  }
+
+}
+
+html {
   height: 100%;
   overflow: hidden;
-  font-size: 18pt;
 }
 
-@media (max-width: 1680px) {
-  .html {
-    font-size: 13pt;
-  }
-}
-
-@media (max-width: 1280px) {
-  .html {
-    font-size: 13pt;
-  }
-}
-
-@media (max-width: 980px) {
-  .html {
-    font-size: 11pt;
-  }
-}
-
-@media (max-width: 736px) {
-  .html {
-    font-size: 11pt;
-  }
-}
-
-.body {
+body {
   min-width: 320px;
   height: 100%;
   overflow-x: hidden;
@@ -305,5 +298,9 @@
       margin-left: .5em; // .45em;
       border-left: solid 1px rgba(255, 255, 255, .5);
     }
+  }
+
+  .label {
+    display: none;
   }
 }

@@ -19,7 +19,8 @@ permalink: "/404.html"
     {% if page.robots %}
       <meta name="robots" content="{{ page.robots }}">
     {% endif %}
-    <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}">
+    <!-- <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}"> -->
+    <style data-href="/assets/css/main.min.css?v={{ build_version }}">{% include css/main.min.css %}</style>
 
   </head>
 

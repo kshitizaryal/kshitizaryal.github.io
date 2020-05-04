@@ -1,12 +1,15 @@
 /*!
  * Kshitiz Aryal Gulpfile (https://kshitizaryal.com.np)
- * Copyright 2020 Milan Aryal https://milanaryal.com.np)
+ * Copyright 2020 Milan Aryal (https://milanaryal.com.np)
  * Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
  */
 
 'use strict';
 
-// Load plugins
+//
+// Load plugin(s)
+//
+
 const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const rename = require('gulp-rename');
@@ -19,42 +22,46 @@ const cssnano = require('cssnano');
 const discardComments = require('postcss-discard-comments');
 const browsersync = require("browser-sync").create();
 
+//
+// Configuration(s)
+//
+
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-shell-commands.md
-var cp = require('child_process');
+const cp = require('child_process');
 
 // Load package.json for banner
 const pkg = require('./package.json');
 
 // Banner template for files header
-var banner = ['/*!',
+const banner = ['/*!',
   ' * <%= pkg.title %> (<%= pkg.url %>)',
   ' * Copyright ' + new Date().getFullYear() + ' <%= pkg.author %> (<%= pkg.author_url %>)',
   ' * Licensed under <%= pkg.license %> (<%= pkg.license_url %>)',
   ' */',
   ''].join('\n');
 
-// Clean dist CSS assets
-var clean = function () {
-  return del(['assets/css/']);
+//
+// Setup task(s)
+//
+
+// Clean paths
+function clean () {
+  return del([ 'assets/css/', '_includes/css/', '_site/' ]);
 }
 
 // Dist CSS
-var css = function () {
+function css () {
   return src('src/scss/main.scss')
-    .pipe(header(banner, { pkg : pkg }))
     .pipe(sass.sync({ precision: 6, outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer({ cascade: false }) ]))
+    .pipe(header(banner, { pkg : pkg }))
     .pipe(dest('assets/css'))
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(rename('main.min.css'))
     .pipe(postcss([ cssnano(), discardComments({ removeAll: true }) ]))
+    .pipe(dest('_includes/css/'))
     .pipe(header(banner, { pkg : pkg }))
     .pipe(dest('assets/css/'));
 }
-
-var build = series(clean, css);
-
-// Default task
-exports.default = build;
 
 // Gulp Watch
 //
@@ -67,36 +74,47 @@ function site (done) {
 }
 
 // BrowserSync
-function browserSync(done) {
+function browserSync (done) {
   browsersync.init({
     server: {
       baseDir: './_site'
     },
     port: 3000,
     open: false
-  });
-  done();
+  }, done);
 }
 
 // BrowserSync reload
-function browserSyncReload(done) {
+function browserSyncReload (done) {
   browsersync.reload();
   done();
 }
 
 // Watch changes
  function watchFiles () {
-  // Watch .scss files
-  watch('src/scss/**/*.scss', series(clean, css, site, browserSyncReload));
-  // Watch site
+
+  var serve = series(css, site);
+
+  // Watch files
   watch([
-    '_includes/**',
-    '_layouts/**',
-    '_pages/**',
-    'assets/**',
-    '!src',
+    '_includes/**/*.html',
+    '_layouts/**/*.html',
+    '_pages/**/*.html', '_pages/**/*.md',
+    'src/**/*.scss',
     '!node_modules'
-  ], series(site, browserSyncReload));
+  ], series(serve, browserSyncReload));
+
 }
 
-exports.watch = series(clean, css, site, parallel(browserSync, watchFiles));
+//
+// Export task(s)
+//
+
+var build = series(clean, css);
+var serve = series(build, site);
+
+// Default task
+exports.default = build;
+
+// Watching task
+exports.watch = series(serve, parallel(browserSync, watchFiles));

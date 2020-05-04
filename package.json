@@ -20,8 +20,8 @@
     "fresh": "rm -rf _site node_modules; npm install",
     "build": "gulp",
     "watch": "gulp watch",
-    "test-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_config_dev.yml",
+    "test-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
