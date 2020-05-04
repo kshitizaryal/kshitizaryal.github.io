@@ -6,10 +6,7 @@
 
 'use strict';
 
-//
 // Load plugin(s)
-//
-
 const { src, dest, series, parallel, watch } = require('gulp');
 const del = require('del');
 const rename = require('gulp-rename');
@@ -20,11 +17,11 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const discardComments = require('postcss-discard-comments');
-const browsersync = require("browser-sync").create();
+const browserSync = require("browser-sync").create();
 
-//
-// Configuration(s)
-//
+/**
+ * Configuration(s)
+ */
 
 // https://github.com/gulpjs/gulp/blob/master/docs/recipes/running-shell-commands.md
 const cp = require('child_process');
@@ -40,9 +37,9 @@ const banner = ['/*!',
   ' */',
   ''].join('\n');
 
-//
-// Setup task(s)
-//
+/**
+ * Setup task(s)
+ */
 
 // Clean paths
 function clean () {
@@ -55,7 +52,7 @@ function css () {
     .pipe(sass.sync({ precision: 6, outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(postcss([ autoprefixer({ cascade: false }) ]))
     .pipe(header(banner, { pkg : pkg }))
-    .pipe(dest('assets/css'))
+    .pipe(dest('assets/css/'))
     .pipe(rename('main.min.css'))
     .pipe(postcss([ cssnano(), discardComments({ removeAll: true }) ]))
     .pipe(dest('_includes/css/'))
@@ -63,19 +60,20 @@ function css () {
     .pipe(dest('assets/css/'));
 }
 
-// Gulp Watch
-//
-// Jekyll & BrowserSync
+/**
+ * Gulp Watch
+ * Jekyll & BrowserSync
+ */
 
 function site (done) {
-  browsersync.notify('Compiling Jekyll, please wait!');
+  browserSync.notify('Compiling Jekyll, please wait!');
   return cp.spawn('npm', [ 'run', 'jekyll-build' ], { stdio: 'inherit' })
     .on('close', done);
 }
 
 // BrowserSync
-function browserSync (done) {
-  browsersync.init({
+function server (done) {
+  browserSync.init({
     server: {
       baseDir: './_site'
     },
@@ -85,8 +83,8 @@ function browserSync (done) {
 }
 
 // BrowserSync reload
-function browserSyncReload (done) {
-  browsersync.reload();
+function serverReload (done) {
+  browserSync.reload();
   done();
 }
 
@@ -102,13 +100,13 @@ function browserSyncReload (done) {
     '_pages/**/*.html', '_pages/**/*.md',
     'src/**/*.scss',
     '!node_modules'
-  ], series(serve, browserSyncReload));
+  ], series(serve, serverReload));
 
 }
 
-//
-// Export task(s)
-//
+/**
+ * Export task(s)
+ */
 
 var build = series(clean, css);
 var serve = series(build, site);
@@ -117,4 +115,4 @@ var serve = series(build, site);
 exports.default = build;
 
 // Watching task
-exports.watch = series(serve, parallel(browserSync, watchFiles));
+exports.watch = series(serve, parallel(server, watchFiles));
