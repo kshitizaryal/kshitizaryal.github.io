@@ -39,6 +39,12 @@ body {
   background-size: cover, cover;
   -webkit-overflow-scrolling: touch;
 
+  //-- font smoothing enabled --//
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+
   &::before {
     position: fixed;
     top: 0;

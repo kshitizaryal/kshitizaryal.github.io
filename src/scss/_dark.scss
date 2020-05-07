@@ -1,0 +1,49 @@
+//
+// Dark theme
+//
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #000;
+
+    &::before {
+      background-color: #333;
+    }
+  }
+
+  img {
+    opacity: .75;
+    transition: opacity .5s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+
+  .hero-profile {
+    background-color: rgba(0, 0, 0, .66); //.929
+  }
+
+  .hero-avatar-wrapper {
+    .hero-avatar {
+      display: inline-block;
+      background: #000;
+      border-radius: 100%;
+    }
+
+    &::before {
+      background: rgba(255, 255, 255, .44);
+    }
+  }
+
+  .hero-title {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  .hero-description {
+    color: rgba(255, 255, 255, .6);
+  }
+
+
+} // @media (prefers-color-scheme: dark) {---}
