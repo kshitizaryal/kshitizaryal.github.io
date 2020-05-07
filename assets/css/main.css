@@ -843,7 +843,7 @@ body.is-loading::before {
     opacity: 1;
   }
   .hero-profile {
-    background-color: rgba(0, 0, 0, 0.66);
+    background-color: rgba(0, 0, 0, 0.69);
   }
   .hero-avatar-wrapper .hero-avatar {
     display: inline-block;
@@ -857,6 +857,21 @@ body.is-loading::before {
     color: rgba(255, 255, 255, 0.8);
   }
   .hero-description {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .error-page {
+    background-color: #000;
+  }
+  .error-page-message {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .error-page-message--small {
+    color: rgba(255, 255, 255, 0.44);
+  }
+  .error-page-message--small a {
+    color: rgba(255, 255, 255, 0.44);
+  }
+  .error-page-message--small a:hover, .error-page-message--small a:active {
     color: rgba(255, 255, 255, 0.6);
   }
 }

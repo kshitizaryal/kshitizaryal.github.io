@@ -22,7 +22,7 @@
   }
 
   .hero-profile {
-    background-color: rgba(0, 0, 0, .66); //.929
+    background-color: rgba(0, 0, 0, .69); //.929
   }
 
   .hero-avatar-wrapper {
@@ -45,5 +45,25 @@
     color: rgba(255, 255, 255, .6);
   }
 
+  .error-page {
+    background-color: #000;
+  }
+
+  .error-page-message {
+    color: rgba(255, 255, 255, .8);
+  }
+
+  .error-page-message--small {
+    color: rgba(255, 255, 255, .44);
+
+    a {
+      color: rgba(255, 255, 255, .44);
+
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, .6);
+      }
+    }
+  }
 
 } // @media (prefers-color-scheme: dark) {---}
