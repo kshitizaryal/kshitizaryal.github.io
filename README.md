@@ -1,9 +1,10 @@
-<p align="center"><img width="48px" height="48px" alt="Kshitiz Aryal" src="https://kshitizaryal.com.np/favicon.ico"></p>
+<p align="center"><img width="200px" height="200px" alt="Kshitiz Aryal" src="assets/img/avatar.png"></p>
+<p align="center"><h1><a href="https://kshitizaryal.com.np/">Kshitiz Aryal</a><h1></p>
 
-# [Kshitiz Aryal](https://kshitizaryal.com.np)
+The uncompiled [Jekyll](https://jekyllrb.com) source code for [kshitizaryal.com.np](https://kshitizaryal.com.np/).
 
-[![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io) [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE) [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-green.svg)](https://twitter.com/KshitizAryal)
+Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of *Kshitiz Aryal*.
 
-The uncompiled [Jekyll](https://jekyllrb.com) source code for [kshitizaryal.com.np](https://kshitizaryal.com.np).
+---
 
-Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of Kshitiz Aryal.
+[![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io) [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-green.svg)](https://twitter.com/KshitizAryal)
