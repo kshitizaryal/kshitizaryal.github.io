@@ -1,5 +1,5 @@
 <p align="center"><img width="200px" height="200px" alt="Kshitiz Aryal" src="assets/img/avatar.png"></p>
-<p align="center"><h1><a href="https://kshitizaryal.com.np/">Kshitiz Aryal</a></h1></p>
+<h1 align="center"><a href="https://kshitizaryal.com.np/">Kshitiz Aryal</a></h1>
 
 The uncompiled [Jekyll](https://jekyllrb.com) source code for [kshitizaryal.com.np](https://kshitizaryal.com.np/).
 
