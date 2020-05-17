@@ -21,7 +21,7 @@ layout: compress
 
         <!-- {% assign site_title = site.title | default: site.name %}
         {% if site_title %}
-          {% assign site_name = site_name | smartify | strip_html | strip_newlines | escape_once %}
+          {% assign site_name = site_name | smartify | strip_html | normalize_whitespace | escape_once %}
         {% endif %}
         <ul class="site-footer-legal">
           <li>&copy; {{ site_title }}</li>
