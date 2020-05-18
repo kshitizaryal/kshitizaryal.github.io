@@ -29,7 +29,7 @@
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.0",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
@@ -41,7 +41,7 @@
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.14.1",
     "postcss-discard-comments": "^4.0.2",
-    "stylelint": "^13.3.3",
+    "stylelint": "^13.4.0",
     "stylelint-config-twbs-bootstrap": "^2.0.1"
   },
   "private": true

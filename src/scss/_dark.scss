@@ -5,7 +5,7 @@
 @media (prefers-color-scheme: dark) {
 
   body {
-    background-color: #000;
+    background-color: #111;
 
     &::before {
       background-color: #333;
@@ -22,7 +22,7 @@
   }
 
   .hero-profile {
-    background-color: rgba(0, 0, 0, .69); //.929
+    background-color: rgba(#222, .828); //.929
   }
 
   .hero-avatar-wrapper {
