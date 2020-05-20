@@ -75,9 +75,9 @@ function site (done) {
 function server (done) {
   browserSync.init({
     server: {
-      baseDir: './_site'
+      baseDir: '_site'
     },
-    port: 3000,
+    port: 4000,
     open: false
   }, done);
 }
@@ -93,13 +93,22 @@ function serverReload (done) {
 
   var serve = series(css, site);
 
+  var copyCSS = function (done) {
+    browserSync.notify('Compiling CSS, please wait!');
+    return cp.spawn('npm', [ 'run', 'copy-css' ], { stdio: 'inherit' })
+      .on('close', done);
+  };
+
+  // Watch Styles
+  watch('src/scss/**', series(css, copyCSS, serverReload));
+
   // Watch files
   watch([
-    '_includes/**/*.html',
+    '_includes/**/*.html', '!_includes/css/**',
     '_layouts/**/*.html',
     '_pages/**/*.html', '_pages/**/*.md',
-    'src/**/*.scss',
-    '!node_modules'
+    '!node_modules',
+    '!_site'
   ], series(serve, serverReload));
 
 }

@@ -21,6 +21,7 @@
     "build": "gulp",
     "watch": "gulp watch",
     "jekyll-build": "bundle exec jekyll build --config _config.yml,_config_dev.yml",
+    "copy-css": "cp -rfv assets/css _site/assets",
     "test-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

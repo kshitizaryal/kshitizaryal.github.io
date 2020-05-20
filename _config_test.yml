@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------
-# | For Travis CI test (https://travis-ci.org/)                        |
+# | Override configuration for Travis CI test (https://travis-ci.org/) |
 # ----------------------------------------------------------------------
 
 url: "http://localhost:4000"
@@ -8,3 +8,4 @@ github:
   owner_url: "https://github.com/KshitizAryal"
   repository_url: "https://github.com/KshitizAryal/kshitizaryal.github.io"
 google_analytics_id: ""
+Override configuration for CI build

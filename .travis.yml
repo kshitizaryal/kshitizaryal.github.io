@@ -1,6 +1,7 @@
 language: ruby
 rvm: 2.5.3
 sudo: false
+
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -8,7 +9,7 @@ env:
 # before_cache:
 #  - rm -rf ./_site # Cleaning up...
 
-bundler_args: --without development
+# bundler_args: --without development
 
 cache:
   bundler: true # vendor/bundle
@@ -16,19 +17,19 @@ cache:
     - node_modules # NPM packages
 
 before_install:
-  - npm install
+  - rm -rf ./_site ./node_modules # Cleaning up...
 
-# install
-#  - bundle install --without development
+install:
+  - npm install
 
 before_script:
-  - npm install
+  - npm run build
 
 script:
-  - npm run build
+  - bundle exec github-pages versions # List dependency versions
+  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
   - bundle exec jekyll build --config _config.yml,_config_test.yml # Building site...
-#  - bundle exec htmlproofer ./_site --only-4xx # Checking site...
-#  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
+  - bundle exec htmlproofer --assume-extension --only-4xx --http-status-ignore "403,429" ./_site # Checking site...
   - rm -rf ./_site # Cleaning up...
 
 branches:
@@ -37,3 +38,6 @@ branches:
 
 git:
   depth: 10
+
+notifications:
+  email: false
