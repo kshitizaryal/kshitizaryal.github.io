@@ -16,11 +16,13 @@ permalink: "/404.html"
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>{{ page_title }} &ndash; {{ site_title }}</title>
+
     {% if page.robots %}
       <meta name="robots" content="{{ page.robots }}">
     {% endif %}
-    <!-- <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}"> -->
-    <style data-href="/assets/css/main.min.css?v={{ build_version }}">{% include css/main.min.css %}</style>
+
+    <!-- Critical CSS -->
+    {% include styles.html %}
 
   </head>
 
