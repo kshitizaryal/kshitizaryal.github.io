@@ -1,6 +1,6 @@
 {%- comment -%}<!-- Styles for _includes/head.html -->{%- endcomment -%}
 
-{% include build_version.html %}
+{%- include build_version.html -%}
 
 {% if jekyll.environment == "development" %}
   <link rel="stylesheet" href="/assets/css/main.min.css?v={{ build_version }}">
