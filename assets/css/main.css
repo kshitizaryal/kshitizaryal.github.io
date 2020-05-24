@@ -711,7 +711,7 @@ body.is-loading::before {
   width: 100%;
   padding: 1.5em 0 0;
   color: rgba(255, 255, 255, 0.75);
-  text-align: center;
+  text-align: right;
   cursor: default;
   transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
 }
@@ -732,10 +732,6 @@ body.is-loading::before {
   list-style: none;
 }
 
-.site-footer-legal a {
-  border-bottom: dotted 1px;
-}
-
 .site-footer-legal a:hover {
   color: #fff;
   border-bottom: 0;
@@ -754,6 +750,56 @@ body.is-loading::before {
 
 .site-footer-legal .label {
   display: none;
+}
+
+@-webkit-keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(0.9);
+  }
+  20%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  10%,
+  30% {
+    transform: scale(0.9);
+  }
+  20%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80% {
+    transform: scale(1.1);
+  }
+}
+
+.site-footer-legal .icon-m {
+  margin-left: 1px;
+  margin-right: 1px;
+  -webkit-animation: heartbeat 1.33s ease-in-out infinite;
+  animation: heartbeat 1.33s ease-in-out infinite;
+}
+
+.site-footer-legal .icon-m:hover {
+  -webkit-animation: none;
+  animation: none;
 }
 
 .error-page {
