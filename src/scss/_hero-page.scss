@@ -14,7 +14,8 @@ html {
 
 @media screen and (max-width: 480px) {
 
-  html, body {
+  html,
+  body {
     min-width: 320px;
   }
 
@@ -183,7 +184,7 @@ body {
   font-family: $theme-font-family-base;
   font-size: 1em;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.4;
   color: rgba(0, 0, 0, .6);
   text-shadow: 0 1px rgba(0, 0, 0, .001);
@@ -265,7 +266,11 @@ body {
   width: 100%;
   padding: 1.5em 0 0;
   color: rgba(255, 255, 255, .75);
-  text-align: right;
+  text-align: center;
+
+  @media (min-width: 480px) {
+    text-align: right;
+  }
 
   cursor: default;
   transition: opacity 3s ease-in-out 0s,
@@ -331,8 +336,8 @@ body {
   }
 
   .icon-m {
-    margin-left: 1px;
     margin-right: 1px;
+    margin-left: 1px;
     animation: heartbeat 1.33s ease-in-out infinite;
 
     &:hover {

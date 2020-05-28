@@ -1,11 +1,17 @@
 <head>
 
-  {% include metadata.html %}
-
   <!-- Basic page needs -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  {% include metadata.html %}
+
   <title>{{ site_title }}</title>
+
+  <!-- Critical CSS -->
+  {% include styles.html %}
+
+  <meta name="title" content="{{ site_title }}">
   <meta name="description" content="{{ page_description }}">
   <meta name="author" content="{{ page_author }}">
   <meta name="generator" content="Jekyll v{{ jekyll.version }}">
@@ -30,8 +36,5 @@
   {% endif %}
 
   <link rel="canonical" href="{{ page_url }}">
-
-  <!-- Critical CSS -->
-  {% include styles.html %}
 
 </head>

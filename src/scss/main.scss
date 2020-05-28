@@ -1,8 +1,8 @@
-//
-// Kshitiz Aryal (https://kshitizaryal.com.np)
-// Copyright 2020 Milan Aryal https://milanaryal.com.np)
-// Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
-//
+/*!
+ * Kshitiz Aryal (https://kshitizaryal.com.np)
+ * Copyright 2020 Milan Aryal https://milanaryal.com.np)
+ * Licensed under MIT (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
+ */
 
 // Core variables and mixins
 @import "variables";
@@ -10,8 +10,8 @@
 
 // Core CSS
 @import "typeface";
-@import "vendor/normalize";
-@import "vendor/reboot";
+@import "normalize.css/normalize"; // ~ vendor
+@import "reboot";
 @import "svg-icons";
 @import "hero-page";
 @import "error-page";

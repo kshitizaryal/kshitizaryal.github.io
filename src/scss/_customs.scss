@@ -1,5 +1,13 @@
 .site-footer-legal {
-  font-size: .6em;
+  font-size: .999rem; // .6rem
+
+  @media (min-width: 480px) {
+    font-size: 1.111rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.333rem;
+  }
 }
 
 .footer-x {

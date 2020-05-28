@@ -78,7 +78,7 @@ exclude:
   - script
   - scripts
   - src
-  - gulpfile.js
+  - postcss.config.js
   - package.json
   - package-lock.json
   - npm-debug.log
