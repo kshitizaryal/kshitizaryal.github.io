@@ -7,8 +7,6 @@ rvm:
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
 script:
-  - npm run start || exit 0 # Test npm build setup
-  - npm run clean # Cleaning up...
   - bundle exec github-pages versions # List dependency versions
   - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
   - bundle exec jekyll build --config _config.yml,_config_test.yml # Building site...
