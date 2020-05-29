@@ -1,41 +1,34 @@
+# GitHub Pages (https://pages.github.com/versions/)
+# Ruby version
 language: ruby
-rvm: 2.5.3
-sudo: false
+rvm:
+  - 2.5.8
+
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script:
+  - npm run start # Test npm build setup
+  - npm run clean # Cleaning up...
+  - bundle exec github-pages versions # List dependency versions
+  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
+  - bundle exec jekyll build --config _config.yml,_config_test.yml # Building site...
+  - bundle exec htmlproofer --assume-extension --only-4xx --http-status-ignore "403,429" ./_site # Checking site...
+  - bundle exec jekyll clean # Cleaning up...
+
+branches:
+  only:
+    - master
 
 env:
   global:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-# before_cache:
-#  - rm -rf ./_site # Cleaning up...
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
 
-# bundler_args: --without development
-
-cache:
-  bundler: true # vendor/bundle
-  directories:
-    - node_modules # NPM packages
-
-before_install:
-  - rm -rf ./_site ./node_modules # Cleaning up...
-
-install:
-  - npm install
-  - bundle install
-
-before_script:
-  - npm run build
-
-script:
-  - bundle exec github-pages versions # List dependency versions
-  - bundle exec github-pages health-check # Checking DNS... (Should have CNAME file)
-  - bundle exec jekyll build --config _config.yml,_config_test.yml # Building site...
-  - bundle exec htmlproofer --assume-extension --only-4xx --http-status-ignore "403,429" ./_site # Checking site...
-  - rm -rf ./_site # Cleaning up...
-
-branches:
-  only:
-    - master
+cache: bundler
 
 git:
   depth: 10
