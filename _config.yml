@@ -11,7 +11,8 @@
 url: "https://kshitizaryal.com.np"
 
 title: "Kshitiz Aryal"
-tagline: "Follow me across the interwebs."
+# tagline: "Follow me across the interwebs."
+tagline: "Keepin&apos; it real since 1999🔥"
 description: "Hey -- this is Kshitiz Aryal, who loves traveling new places and listening music a lot."
 logo: "/assets/img/avatar.png"
 repository: "KshitizAryal/kshitizaryal.github.io"
@@ -23,9 +24,10 @@ author:
   uri: "https://twitter.com/KshitizAryal"
   avatar: "/assets/img/avatar.png"
   bio: "Life is like riding a bike. To keep your balance, you must keep moving."
-  facebook: "KshitizAryal"
   twitter: "KshitizAryal"
+  facebook: "KshitizAryal"
   instagram: "considerkshitiz"
+  github: "KshitizAryal"
 #  street: "#"
 #  locality: "#"
 #  region: "#"
@@ -35,6 +37,18 @@ author:
 # Google Analytics ID
 google_analytics_id: "UA-120293538-1"
 
+# SEO
+twitter:
+  username: "KshitizAryal"
+  card: summary
+# SEO JSON-LD
+social:
+  name: "Kshitiz Aryal"
+  links:
+    - https://twitter.com/KshitizAryal
+    - https://www.facebook.com/KshitizAryal
+    - https://www.instagram.com/ConsiderKshitiz
+    - https://github.com/KshitizAryal
 
 # ----------------------------------------------------------------------
 # | Build settings                                                     |
@@ -43,6 +57,12 @@ google_analytics_id: "UA-120293538-1"
 encoding: "utf-8"
 timezone: "Asia/Kathmandu"
 lang: "en-US"
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/img/avatar.png"
 
 # sass:
 #  sass_dir: _sass
@@ -62,7 +82,7 @@ plugins:
 # - jekyll-mentions
 # - jekyll-paginate
 # - jekyll-redirect-from
-# - jekyll-seo-tag
+  - jekyll-seo-tag
   - jekyll-sitemap
 # - jemoji
 

@@ -5,7 +5,7 @@
 @media (prefers-color-scheme: dark) {
 
   body {
-    background-color: #111;
+    background-color: #222;
 
     &::before {
       background-color: #333;
@@ -46,7 +46,7 @@
   }
 
   .error-page {
-    background-color: #000;
+    background-color: #222;
   }
 
   .error-page-message {
