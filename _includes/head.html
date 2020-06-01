@@ -29,4 +29,8 @@
   <!-- humanstxt.org -->
   <link type="text/plain" rel="author" href="{{ 'humans.txt' | absolute_url }}" />
 
+  {% if page.permalink == "/" or "/about/" %}
+    {% include about_json_ld.html %}
+  {% endif %}
+
 </head>

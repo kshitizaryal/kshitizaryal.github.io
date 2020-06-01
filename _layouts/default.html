@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!doctype html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="{{ page.lang | replace:'-','_' | default: site.lang | default:'en' | downcase }}" prefix="og: http://ogp.me/ns#">
 
   {% include head.html %}
 

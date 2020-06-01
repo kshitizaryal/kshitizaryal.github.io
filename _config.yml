@@ -24,15 +24,12 @@ author:
   uri: "https://twitter.com/KshitizAryal"
   avatar: "/assets/img/avatar.png"
   bio: "Life is like riding a bike. To keep your balance, you must keep moving."
+  gender: "Male"
+  nationality: "Nepal"
   twitter: "KshitizAryal"
+  github: "KshitizAryal"
   facebook: "KshitizAryal"
   instagram: "considerkshitiz"
-  github: "KshitizAryal"
-#  street: "#"
-#  locality: "#"
-#  region: "#"
-  country: "Nepal"
-#  postcode: "#"
 
 # Google Analytics ID
 google_analytics_id: "UA-120293538-1"
@@ -46,9 +43,9 @@ social:
   name: "Kshitiz Aryal"
   links:
     - https://twitter.com/KshitizAryal
+    - https://github.com/KshitizAryal
     - https://www.facebook.com/KshitizAryal
     - https://www.instagram.com/ConsiderKshitiz
-    - https://github.com/KshitizAryal
 
 # ----------------------------------------------------------------------
 # | Build settings                                                     |
@@ -56,7 +53,7 @@ social:
 
 encoding: "utf-8"
 timezone: "Asia/Kathmandu"
-lang: "en-US"
+# lang: "en-US"
 
 defaults:
   - scope:
