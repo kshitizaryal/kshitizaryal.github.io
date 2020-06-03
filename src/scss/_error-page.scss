@@ -34,6 +34,7 @@
 .error-page-message--lead {
   margin-bottom: 10px;
   font-size: 32px;
+  transform: rotate(-1deg);
 
   @media (min-width: 768px) {
     font-size: 60px;

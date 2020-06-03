@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   line-height: 1;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #fafafa;
   background-image: linear-gradient(to top, rgba(0, 0, 0, .44), rgba(0, 0, 0, .44)), url("/assets/img/hero.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
@@ -336,11 +336,14 @@ body {
   }
 
   .icon-m {
+    padding: 1px;
     margin-right: 1px;
     margin-left: 1px;
+    color: #fafafa;
     animation: heartbeat 1.33s ease-in-out infinite;
 
     &:hover {
+      color: #fff;
       animation: none;
     }
   }

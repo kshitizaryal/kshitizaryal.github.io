@@ -65,7 +65,7 @@
     "postcss-discard-comments": "^4.0.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.5.0",
-    "stylelint-config-twbs-bootstrap": "^2.0.1"
+    "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
   "private": true
 }
