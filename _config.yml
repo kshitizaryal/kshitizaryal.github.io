@@ -95,6 +95,7 @@ exclude:
   - script
   - scripts
   - src
+  - banner.js
   - postcss.config.js
   - package.json
   - package-lock.json

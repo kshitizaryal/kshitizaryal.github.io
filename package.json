@@ -25,6 +25,7 @@
     "css-compile": "node-sass --include-path node_modules --output-style compressed --precision 6 src/scss/style.scss -o assets/css/",
     "css-postcss": "NODE_ENV=production postcss --replace assets/css/style.css",
     "css-include": "rimraf _includes/static/style.css && cpy assets/css/style.css _includes/static/",
+    "css-banner": "node banner.js",
     "cssdev": "npm-run-all cssdev-*",
     "cssdev-clean": "rimraf assets/css/",
     "cssdev-compile": "node-sass --include-path node_modules --output-style expanded --source-map true --source-map-contents true --precision 6 src/scss/style.scss -o assets/css/",
@@ -44,7 +45,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "5.13.0",
     "@openfonts/jost_latin": "0.0.2",
-    "normalize.css": "8.0.1"
+    "normalize.css": "8.0.1",
+    "reset.css": "^2.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
@@ -54,7 +56,7 @@
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.1",
+    "gulp-cli": "^2.3.0",
     "gulp-header": "^2.0.9",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
@@ -64,7 +66,7 @@
     "postcss-cli": "^7.1.1",
     "postcss-discard-comments": "^4.0.2",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.5.0",
+    "stylelint": "^13.6.0",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
   "private": true
