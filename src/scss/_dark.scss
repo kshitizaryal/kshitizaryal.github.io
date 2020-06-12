@@ -3,7 +3,6 @@
 //
 
 @media (prefers-color-scheme: dark) {
-
   body {
     background-color: #222;
 
@@ -13,8 +12,8 @@
   }
 
   img {
-    opacity: .75;
-    transition: opacity .5s ease-in-out;
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
   }
 
   img:hover {
@@ -22,7 +21,7 @@
   }
 
   .hero-profile {
-    background-color: rgba(#222, .828); //.929
+    background-color: rgba(#222, 0.828); //.929
   }
 
   .hero-avatar-wrapper {
@@ -33,16 +32,16 @@
     }
 
     &::before {
-      background: rgba(255, 255, 255, .44);
+      background: rgba(255, 255, 255, 0.44);
     }
   }
 
   .hero-title {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .hero-description {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .error-page {
@@ -50,20 +49,19 @@
   }
 
   .error-page-message {
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, 0.8);
   }
 
   .error-page-message--small {
-    color: rgba(255, 255, 255, .44);
+    color: rgba(255, 255, 255, 0.44);
 
     a {
-      color: rgba(255, 255, 255, .44);
+      color: rgba(255, 255, 255, 0.44);
 
       &:hover,
       &:active {
-        color: rgba(255, 255, 255, .6);
+        color: rgba(255, 255, 255, 0.6);
       }
     }
   }
-
 } // @media (prefers-color-scheme: dark) {---}
