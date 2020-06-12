@@ -39,7 +39,7 @@
     "watch-server": "npm run cssdev && npm run site && browser-sync start --server ./_site --port 4000 --no-ui --no-open",
     "watch-css": "chokidar \"src/scss/**/*.scss\" -c \"npm run cssdev && npm run copy:site-css && browser-sync reload --port 4000\"",
     "watch-site": "chokidar \"_includes/**/*.html\" \"_layouts/**/*.html\" \"_pages/**/*.html\" \"_pages/**/*.md\" -c \"npm run site-compile && browser-sync reload --port 4000\"",
-    "lint-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
+    "lint-css": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache || true",
     "format": "prettier src/{scss/**/*.scss,js/**/*.js} --write",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
