@@ -20,7 +20,7 @@ branch: "master"
 
 author:
   name: "Kshitiz Aryal"
-#  email: "#"
+  #  email: "#"
   uri: "https://twitter.com/KshitizAryal"
   avatar: "/assets/img/avatar.png"
   bio: "Life is like riding a bike. To keep your balance, you must keep moving."
@@ -65,6 +65,7 @@ defaults:
 #  sass_dir: _sass
 #  style: :compressed
 
+# HTML compression (https://jch.penibelst.de/)
 compress_html:
   clippings: all
   comments: all
@@ -73,12 +74,12 @@ compress_html:
   profile: false
 
 plugins:
-# - jekyll-feed
-# - jekyll-gist
+  # - jekyll-feed
+  # - jekyll-gist
   - jekyll-github-metadata
-# - jekyll-mentions
-# - jekyll-paginate
-# - jekyll-redirect-from
+  # - jekyll-mentions
+  # - jekyll-paginate
+  # - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
 # - jemoji

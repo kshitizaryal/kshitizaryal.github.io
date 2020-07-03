@@ -44,13 +44,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "5.13.0",
+    "@fortawesome/fontawesome-free": "5.13.1",
     "@openfonts/jost_latin": "0.0.2",
     "normalize.css": "8.0.1",
     "reset.css": "^2.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.4",
     "browser-sync": "^2.26.7",
     "chokidar-cli": "^2.1.0",
     "cpy-cli": "^3.1.1",

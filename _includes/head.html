@@ -1,8 +1,8 @@
 <head>
 
   <!-- Basic page needs -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
   <!-- Critical CSS -->
   {% include styles.html %}
@@ -21,14 +21,14 @@
     {% seo %}
   {% endif %}
 
-  <!-- robotstxt.org  -->
+  {% include about_json_ld.html %}
+
   {% if page.robots %}
-    <meta name="robots" content="{{ page.robots }}">
+    <!-- robotstxt.org  -->
+    <meta name="robots" content="{{ page.robots }}" />
   {% endif %}
 
   <!-- humanstxt.org -->
   <link type="text/plain" rel="author" href="{{ 'humans.txt' | absolute_url }}" />
-
-  {% include about_json_ld.html %}
 
 </head>
