@@ -1,9 +1,11 @@
-{%- comment -%}<!-- Styles for _includes/head.html -->{%- endcomment -%}
+{%- comment -%}<!-- _includes/head.html, _includes/head_no_seo.html -->{%- endcomment -%}
 
 {%- include build_version.html -%}
 
 {% if jekyll.environment == "development" %}
   <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}?v={{ build_version }}" />
 {% else %}
-  <style data-href="{{ 'assets/css/style.css' | relative_url }}?v={{ build_version }}">{% include static/style.css %}</style>
+  <style data-href="{{ 'assets/css/style.css' | relative_url }}?v={{ build_version }}">
+    {%- include static/style.css -%}
+  </style>
 {% endif %}
