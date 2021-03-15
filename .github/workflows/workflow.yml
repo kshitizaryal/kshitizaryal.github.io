@@ -7,29 +7,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone repository
-      uses: actions/checkout@v2
+      - name: Clone repository
+        uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7.1 # Not needed with a .ruby-version file
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7.1 # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-    - name: List dependency versions
-      run: bundle exec github-pages versions
+      - name: List dependency versions
+        run: bundle exec github-pages versions
 
-    - name: Checking DNS... # Should have CNAME file
-      run: bundle exec github-pages health-check
+      - name: Checking DNS... # Should have CNAME file
+        run: bundle exec github-pages health-check
 
-    - name: Building site...
-      run: bundle exec jekyll build --config _config.yml,_config_test.yml --profile
+      - name: Building site...
+        run: bundle exec jekyll build --config _config.yml,_config_test.yml --profile
 
-    - name: Checking Jekyll configuration
-      run: bundle exec jekyll doctor
+      - name: Checking Jekyll configuration
+        run: bundle exec jekyll doctor
 
-    - name: Checking site...
-      run: bundle exec htmlproofer ./_site --allow-hash-href --assume-extension --http-status-ignore "403,429" --only-4xx
+      - name: Checking site...
+        run: bundle exec htmlproofer ./_site --allow-hash-href --assume-extension --http-status-ignore "403,429" --only-4xx
 
-    - name: Cleaning up...
-      run: bundle exec jekyll clean
+      - name: Cleaning up...
+        run: bundle exec jekyll clean
