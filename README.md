@@ -11,4 +11,4 @@ The uncompiled [Jekyll](https://jekyllrb.com) source code for [kshitizaryal.com.
 
 ---
 
-[![Build Status](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io.svg?branch=master)](https://travis-ci.org/KshitizAryal/kshitizaryal.github.io) [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-green.svg)](https://twitter.com/KshitizAryal)
+[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml) [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-green.svg)](https://twitter.com/KshitizAryal)
