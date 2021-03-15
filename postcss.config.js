@@ -5,9 +5,11 @@ const discardComments = require('postcss-discard-comments')
 
 const purgecssConfig = {
   content: ['!(_site|node_modules)/**/*.+(html|js|md)', '*.html'],
-  whitelist: [],
-  whitelistPatterns: [],
-  whitelistPatternsChildren: [],
+  safelist: {
+    standard: [],
+    deep: [],
+    greedy: [],
+  },
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 }
 

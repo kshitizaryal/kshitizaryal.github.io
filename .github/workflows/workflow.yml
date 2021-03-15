@@ -1,6 +1,9 @@
 name: My workflow
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
@@ -19,17 +22,17 @@ jobs:
       - name: List dependency versions
         run: bundle exec github-pages versions
 
-      - name: Checking DNS... # Should have CNAME file
+      - name: Checking DNS # Should have CNAME file
         run: bundle exec github-pages health-check
-
-      - name: Building site...
-        run: bundle exec jekyll build --config _config.yml,_config_test.yml --profile
 
       - name: Checking Jekyll configuration
         run: bundle exec jekyll doctor
 
-      - name: Checking site...
-        run: bundle exec htmlproofer ./_site --allow-hash-href --assume-extension --http-status-ignore "403,429" --only-4xx
+      - name: Building site
+        run: bundle exec jekyll build --config _config.yml,_config_test.yml --profile
 
-      - name: Cleaning up...
+      - name: Checking site
+        run: bundle exec htmlproofer ./_site --allow-hash-href --assume-extension --check-external-hash --check-img-http --internal-domains "kshitizaryal.com.np" --http-status-ignore "403,429" --only-4xx
+
+      - name: Cleaning up
         run: bundle exec jekyll clean
