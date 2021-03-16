@@ -1,21 +1,9 @@
 {
   "name": "kshitizaryal.github.io",
   "title": "Kshitiz Aryal",
-  "description": "Build assets for kshitizaryal.com.np",
   "url": "https://kshitizaryal.com.np",
-  "author": "Milan Aryal",
-  "author_url": "https://milanaryal.com.np",
-  "license": "MIT",
-  "license_url": "https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE",
-  "main": "gulpfile.js",
-  "homepage": "https://github.com/KshitizAryal/kshitizaryal.github.io#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KshitizAryal/kshitizaryal.github.io.git"
-  },
-  "bugs": {
-    "url": "https://github.com/KshitizAryal/kshitizaryal.github.io/issues"
-  },
+  "description": "Build assets for kshitizaryal.com.np",
+  "main": "index.js",
   "scripts": {
     "start": "npm run fresh && npm run build",
     "fresh": "rm -rf node_modules package-lock.json && npm install",
@@ -65,5 +53,17 @@
     "stylelint": "^13.6.0",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KshitizAryal/kshitizaryal.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KshitizAryal/kshitizaryal.github.io/issues"
+  },
+  "homepage": "https://github.com/KshitizAryal/kshitizaryal.github.io#readme",
+  "author": "Milan Aryal",
+  "author_url": "https://milanaryal.com.np",
+  "license": "MIT",
+  "license_url": "https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE",
   "private": true
 }

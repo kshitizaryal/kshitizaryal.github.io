@@ -31,7 +31,7 @@ jobs:
       - name: Building site
         run: bundle exec jekyll build --config _config.yml,_config_test.yml --profile
 
-      - name: Checking site
+      - name: Checking HTML files
         run: bundle exec htmlproofer ./_site --allow-hash-href --assume-extension --check-external-hash --check-img-http --internal-domains "kshitizaryal.com.np" --http-status-ignore "403,429" --only-4xx
 
       - name: Cleaning up
