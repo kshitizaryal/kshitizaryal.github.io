@@ -15,8 +15,6 @@ title: "Kshitiz Aryal"
 tagline: "Keepin&apos; it real since 1999🔥"
 description: "Hey -- this is Kshitiz Aryal, who loves traveling new places and listening music a lot."
 logo: "/assets/img/avatar.png"
-repository: "KshitizAryal/kshitizaryal.github.io"
-branch: "master"
 
 author:
   name: "Kshitiz Aryal"
@@ -51,9 +49,11 @@ social:
 # | Build settings                                                     |
 # ----------------------------------------------------------------------
 
-encoding: "utf-8"
-timezone: "Asia/Kathmandu"
+repository: "KshitizAryal/kshitizaryal.github.io"
+branch: "master"
 # lang: "en-US"
+timezone: "Asia/Kathmandu"
+theme: null
 
 defaults:
   - scope:
@@ -61,16 +61,12 @@ defaults:
     values:
       image: "/assets/img/avatar.png"
 
-# sass:
-#  sass_dir: _sass
-#  style: :compressed
-
 # HTML compression (https://jch.penibelst.de/)
 compress_html:
   clippings: all
   comments: all
   ignore:
-    envs: development
+    envs: [development]
   profile: false
 
 plugins:
