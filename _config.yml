@@ -8,11 +8,11 @@
 # ----------------------------------------------------------------------
 
 # URL of site, include http(s)://, do not include a trailing slash
-url: "https://kshitizaryal.com.np"
+url: "https://kshitizaryal.github.io"
 
 title: "Kshitiz Aryal"
 # tagline: "Follow me across the interwebs."
-tagline: "Keepin&apos; it real since 1999🔥"
+tagline: "Keepin&apos; it real since 1999"
 description: "Hey -- this is Kshitiz Aryal, who loves traveling new places and listening music a lot."
 logo: "/assets/img/avatar.png"
 
@@ -30,7 +30,7 @@ author:
   instagram: "considerkshitiz"
 
 # Google Analytics ID
-google_analytics_id: "UA-120293538-1"
+# google_analytics_id: "UA-XXXXX-X"
 
 # SEO
 twitter:
@@ -50,8 +50,8 @@ social:
 # ----------------------------------------------------------------------
 
 repository: "KshitizAryal/kshitizaryal.github.io"
-branch: "master"
-# lang: "en-US"
+branch: "main"
+lang: "en-US"
 timezone: "Asia/Kathmandu"
 theme: null
 

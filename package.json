@@ -1,8 +1,8 @@
 {
   "name": "kshitizaryal.github.io",
   "title": "Kshitiz Aryal",
-  "url": "https://kshitizaryal.com.np",
-  "description": "Build assets for kshitizaryal.com.np",
+  "url": "https://kshitizaryal.github.io",
+  "description": "Build assets for kshitizaryal.github.io",
   "main": "index.js",
   "scripts": {
     "start": "npm run fresh && npm run build",

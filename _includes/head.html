@@ -15,7 +15,7 @@
     {%- if site.tagline -%}
       {%- assign site_tagline = site.tagline | smartify | strip_html | normalize_whitespace | escape_once -%}
     {%- endif -%}
-    <title>{{ site_title }} | {{ site_tagline }}</title>
+    <title>{{ site_title }} · {{ site_tagline }}</title>
     {% seo title=false %}
   {% else %}
     {% seo %}
