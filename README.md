@@ -11,9 +11,9 @@ The uncompiled [Jekyll](https://jekyllrb.com/) source code for [kshitizaryal.git
 
 ---
 
-[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml/badge.svg?branch=master)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml)
+[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml/badge.svg?branch=main)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml)
 [![Made with Jekyll](https://img.shields.io/badge/Jekyll-v3.9.0-blue?logo=jekyll&logoColor=white)](https://jekyllrb.com/)
 [![Hosted with GitHub Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
-[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/KshitizAryal/kshitizaryal.github.io/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/KshitizAryal/kshitizaryal.github.io/blob/main/LICENSE)
 [![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-blue.svg)](https://twitter.com/KshitizAryal)
