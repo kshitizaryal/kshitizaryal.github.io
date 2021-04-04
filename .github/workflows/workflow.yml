@@ -22,6 +22,12 @@ jobs:
           ruby-version: ${{ env.RUBY_VERSION }} # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
+      - name: Version info
+        run: |
+          ruby --version
+          gem --version
+          bundle --version
+
       - name: List dependency versions
         run: bundle exec github-pages versions
 
