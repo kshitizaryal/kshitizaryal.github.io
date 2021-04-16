@@ -34,9 +34,28 @@
   clear: both;
 }
 
+// Root
 //
-// Other
+// Ability to the value of the root font sizes, affecting the value of `rem`.
+// null by default, thus nothing is generated.
+
+:root {
+  font-size: $font-size-root;
+
+  @if $enable-smooth-scroll {
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
 //
+// Global components
+//
+
+body {
+  font-family: $font-family-base;
+}
 
 a {
   color: inherit;
@@ -50,10 +69,6 @@ a {
     text-decoration: none;
     outline: 0;
   }
-}
-
-.hide {
-  display: none !important;
 }
 
 // Hidden attribute

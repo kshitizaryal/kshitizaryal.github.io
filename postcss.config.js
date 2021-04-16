@@ -4,7 +4,8 @@ const cssnano = require('cssnano')
 const discardComments = require('postcss-discard-comments')
 
 const purgecssConfig = {
-  content: ['!(_site|node_modules)/**/*.+(html|js|md)', '*.html'],
+  // content: ['!(_site|node_modules)/**/*.+(html|js|md)', '*.html'],
+  content: ['./src/**/*.+(html|js|md)'],
   safelist: {
     standard: [],
     deep: [],

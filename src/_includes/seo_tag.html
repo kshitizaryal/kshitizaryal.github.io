@@ -1,0 +1,21 @@
+{%- assign site_title = site.title | default: site.name -%}
+
+{%- if site_title -%}
+  {%- assign site_title = site_title | smartify | strip_html | normalize_whitespace | escape_once -%}
+{%- endif -%}
+
+{%- if site.tagline -%}
+  {%- assign site_tagline = site.tagline | smartify | strip_html | normalize_whitespace | escape_once -%}
+{%- endif -%}
+
+{% if page.permalink == "/" %}
+  <title>{{ site_title }} &bull; {{ site_tagline }}</title>
+  {% seo title=false %}
+{% else %}
+  {% seo %}
+{% endif %}
+
+{%- comment -%}<!-- Site author JSON-LD -->{%- endcomment -%}
+{% if page.permalink == "/" or page.permalink == "/about/" %}
+  {% include about_json_ld.html %}
+{% endif %}

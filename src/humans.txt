@@ -13,24 +13,19 @@ layout: null
         \/     \/     \/                  \/         \/       \/          \/
 
 /* TEAM */
-  {% for contributor in site.github.contributors %}
-  Name: {{ contributor.login }}
-  Site: {{ contributor.html_url }}
-  {% endfor %}
-/* THANKS */
 
-  GitHub, Jekyll, HTML5 Boilerplate, Bootstrap, Google Fonts, Font Awesome,
-  and other great open source projects developers without them this project
-  is not possible.
+  Web admin: Kshitiz Aryal
+  Twitter: @KshitizAryal
+  Location: Kathmandu, Nepal
 
-/* TECHNOLOGY COLOPHON */
-
-  Standards: HTML5, CSS3
-  Components: {% for dependency in site.github.versions %}{{ dependency[0] }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}
+  Web designer: Milan Aryal
+  Twitter: @MilanAryal
+  Location: Kathmandu, Nepal
 
 /* SITE */
 
   Last updated: {{ site.time | date: '%Y/%m/%d' }}
-  Language: English / Nepali
-  Doctype: HTML5
-  IDE: Visual Studio Code, Atom Editor
+  Language: English
+  Standards: HTML5, CSS3
+  Components: Jekyll v{{ jekyll.version }}
+  IDE: Visual Studio Code

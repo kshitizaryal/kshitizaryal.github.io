@@ -8,4 +8,3 @@ layout: null
 User-agent: *
 Disallow:
 Sitemap: {{ 'sitemap.xml' | absolute_url }}
-Host: {{ site.url | remove:'https://' | remove:'http://' }}

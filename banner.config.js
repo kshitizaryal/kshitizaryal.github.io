@@ -1,6 +1,6 @@
 const fs = require('fs')
 const pkg = require('./package.json')
-const filename = 'assets/css/style.css'
+const filename = 'src/assets/css/style.css'
 const script = fs.readFileSync(filename)
 const padStart = (str) => ('0' + str).slice(-2)
 const dateObj = new Date()

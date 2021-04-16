@@ -1,38 +1,34 @@
-# Jekyll configuration (https://jekyllrb.com/docs/configuration/)
+# Jekyll configuration › https://jekyllrb.com/docs/configuration/
 
-# Coding guide
-# camelCase for JavaScript, underscores for Liquid tag, and hyphens for CSS.
-
-# ----------------------------------------------------------------------
-# | Site settings                                                      |
-# ----------------------------------------------------------------------
+# --------------- Site settings ---------------
 
 # URL of site, include http(s)://, do not include a trailing slash
-url: "https://kshitizaryal.github.io"
+url: "https://kshitizaryal.com.np"
 
 title: "Kshitiz Aryal"
 # tagline: "Follow me across the interwebs."
-tagline: "Keepin&apos; it real since 1999"
+tagline: "Keepin&apos; it real"
 description: "Hey -- this is Kshitiz Aryal, who loves traveling new places and listening music a lot."
 logo: "/assets/img/avatar.png"
 
 author:
   name: "Kshitiz Aryal"
-  #  email: "#"
+  email: null
   uri: "https://twitter.com/KshitizAryal"
   avatar: "/assets/img/avatar.png"
   bio: "Life is like riding a bike. To keep your balance, you must keep moving."
   gender: "Male"
   nationality: "Nepal"
+  facebook: null
+  instagram: "ConsiderKshitiz"
+  telegram: "KshitizAryal"
   twitter: "KshitizAryal"
   github: "KshitizAryal"
-  facebook: "KshitizAryal"
-  instagram: "ConsiderKshitiz"
 
 # Google Analytics ID
-# google_analytics_id: "UA-XXXXX-X"
+google_analytics_id: "UA-120293538-1"
 
-# SEO
+# SEO › jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 twitter:
   username: "KshitizAryal"
   card: summary
@@ -42,18 +38,18 @@ social:
   links:
     - https://twitter.com/KshitizAryal
     - https://github.com/KshitizAryal
-    - https://www.facebook.com/KshitizAryal
     - https://www.instagram.com/ConsiderKshitiz
 
-# ----------------------------------------------------------------------
-# | Build settings                                                     |
-# ----------------------------------------------------------------------
+# --------------- Build settings ---------------
 
-repository: "KshitizAryal/kshitizaryal.github.io"
-branch: "main"
-lang: "en-US"
+# Where things are
+source: src
+
+# the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
+# lang: "en-US"
+
+# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: "Asia/Kathmandu"
-theme: null
 
 defaults:
   - scope:
@@ -61,42 +57,6 @@ defaults:
     values:
       image: "/assets/img/avatar.png"
 
-# HTML compression (https://jch.penibelst.de/)
-compress_html:
-  clippings: all
-  comments: all
-  ignore:
-    envs: [development]
-  profile: false
-
 plugins:
-  # - jekyll-feed
-  # - jekyll-gist
-  - jekyll-github-metadata
-  # - jekyll-mentions
-  # - jekyll-paginate
-  # - jekyll-redirect-from
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jemoji
-
-include: ["_pages"]
-
-exclude:
-  - README.md
-  - LICENSE
-  - CNAME
-  - Gemfile
-  - Gemfile.lock
-  - Rakefile
-  - script
-  - vendor
-  - bundle
-  - ".bundle"
-  - node_modules
-  - src
-  - package.json
-  - package-lock.json
-  - npm-debug.log
-  - postcss.config.js
-  - banner.js

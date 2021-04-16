@@ -2,7 +2,7 @@
 // Hero page
 //
 
-html {
+:root {
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
@@ -11,13 +11,13 @@ html {
 }
 
 @media screen and (max-width: 480px) {
-  html,
+  :root,
   body {
     min-width: 320px;
   }
 }
 
-html {
+:root {
   height: 100%;
   overflow: hidden;
 }
@@ -31,10 +31,10 @@ body {
   background-color: #fafafa;
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.44),
-      rgba(0, 0, 0, 0.44)
+      rgba(0, 0, 0, 0.22),
+      rgba(0, 0, 0, 0.22)
     ),
-    url("/assets/img/hero.jpg");
+    url("/assets/img/hero-20210407.jpg");
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   background-position: center, center;
@@ -238,6 +238,12 @@ body {
     &.icon-instagram:hover {
       color: $social-instagram-color;
       background-color: $social-instagram-color;
+      border: solid 1px #fff;
+    }
+
+    &.icon-telegram:hover {
+      color: $social-telegram-color;
+      background-color: $social-telegram-color;
       border: solid 1px #fff;
     }
 

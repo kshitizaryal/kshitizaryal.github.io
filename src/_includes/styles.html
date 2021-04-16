@@ -1,4 +1,4 @@
-{%- comment -%}<!-- _includes/head.html, _includes/head_no_seo.html -->{%- endcomment -%}
+{%- comment -%}<!-- _includes/head.html, _pages/404.html -->{%- endcomment -%}
 
 {%- include build_version.html -%}
 
@@ -6,6 +6,6 @@
   <link rel="stylesheet" href="{{ 'assets/css/style.css' | relative_url }}?v={{ build_version }}" />
 {% else %}
   <style data-href="{{ 'assets/css/style.css' | relative_url }}?v={{ build_version }}">
-    {%- include static/style.css -%}
+    {%- include style.css -%}
   </style>
 {% endif %}

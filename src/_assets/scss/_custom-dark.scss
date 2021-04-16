@@ -5,6 +5,12 @@
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #222;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.44),
+        rgba(0, 0, 0, 0.44)
+      ),
+      url("/assets/img/hero-dark-20210407.jpg");
 
     &::before {
       background-color: #333;
