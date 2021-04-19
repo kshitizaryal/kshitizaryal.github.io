@@ -7,7 +7,7 @@
 <p align="center">Source code for <a href="https://kshitizaryal.com.np/">kshitizaryal.com.np</a></p>
 <div align="center">
 
-[![My workflow status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml/badge.svg?branch=main)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/workflow.yml)
+[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions?workflow=CI)
 
 </div><br />
 
