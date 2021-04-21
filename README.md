@@ -17,10 +17,10 @@ The uncompiled [Jekyll](https://jekyllrb.com/) source code for _[kshitizaryal.co
 
 <div align="center">
 
-[![Made with Jekyll](https://img.shields.io/badge/Jekyll-v4.2.0-blue?logo=jekyll&logoColor=white)](https://jekyllrb.com/)
-[![Hosted with GitHub Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
-[![Made with GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
+[![Built with Jekyll](https://img.shields.io/badge/Generator-Jekyll_v4.x-blue?logo=jekyll&logoColor=white)](https://jekyllrb.com/)
+[![Hosted with GitHub Pages](https://img.shields.io/badge/Web_Hosting-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
+[![Continuous Integration using GitHub Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/KshitizAryal/kshitizaryal.github.io/blob/main/LICENSE)
-[![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-blue.svg)](https://twitter.com/KshitizAryal)
+[![Twitter](https://img.shields.io/badge/Twitter-@KshitizAryal-blue?logo=twitter&logoColor=white)](https://twitter.com/KshitizAryal)
 
 </div>

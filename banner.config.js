@@ -9,8 +9,10 @@ const date = `${dateObj.getFullYear()}-${padStart(
 )}-${padStart(dateObj.getDate())}`
 const banner = `/*!
  * ${pkg.title} (${pkg.url})
- * Copyright ${dateObj.getFullYear()} ${pkg.author} (${pkg.author_url})
- * Licensed under ${pkg.license} (${pkg.license_url})
+ * Copyright ${dateObj.getFullYear()} ${pkg.author}
+ * Licensed under ${
+   pkg.license
+ } (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/main/LICENSE)
  */
 `
 

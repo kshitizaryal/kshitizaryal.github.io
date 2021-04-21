@@ -56,6 +56,7 @@
     "stylelint": "^13.6.0",
     "stylelint-config-twbs-bootstrap": "^2.0.3"
   },
+  "main": "_site/index.html",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KshitizAryal/kshitizaryal.github.io.git"
@@ -64,8 +65,6 @@
     "url": "https://github.com/KshitizAryal/kshitizaryal.github.io/issues"
   },
   "homepage": "https://github.com/KshitizAryal/kshitizaryal.github.io#readme",
-  "author": "Milan Aryal",
-  "author_url": "https://milanaryal.com.np",
-  "license": "MIT",
-  "license_url": "https://github.com/KshitizAryal/kshitizaryal.github.io/blob/main/LICENSE"
+  "author": "Milan Aryal (https://milanaryal.com.np)",
+  "license": "MIT"
 }
