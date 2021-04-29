@@ -1,10 +1,13 @@
 // Variables
 
 $primary:                        #42dca3 !default;
-$font-family-base:               -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// stylelint-disable value-keyword-case
+$font-family-base:               system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-sans-serif:         "Jost", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:              Georgia, "Times New Roman", Times, serif !default;
-$font-family-monospace:          Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-serif:              Georgia, Cambria, "Times New Roman", Times, serif !default;
+$font-family-monospace:          SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+// stylelint-enable value-keyword-case
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text
@@ -31,7 +34,7 @@ $social-instagram-color:         #833ab4 !default; // has multi colors
 $social-linkedin-color:          #0077b5 !default; // has multi colors
 $social-pinterest-color:         #bd081c !default;
 $social-rss-color:               #fa9b39 !default;
-$social-telegram-color:          #0088cc !default;
+$social-telegram-color:          #08c !default;
 $social-tumblr-color:            #35465c !default;
 $social-twitter-color:           #55acee !default;
 $social-vimeo-color:             #1ab7ea !default; // has multi colors
