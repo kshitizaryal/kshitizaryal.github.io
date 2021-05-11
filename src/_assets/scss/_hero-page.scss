@@ -95,7 +95,7 @@ body {
   text-align: center;
   cursor: default;
   background-color: rgba(255, 255, 255, 0.929); //.929
-  border-radius: 4px; // .375rem;
+  border-radius: 0.25rem; // 4px; // .375rem;
   // opacity: .95;
   transition: all 1s ease 0s;
   transform: perspective(1000px) rotateX(0deg);
