@@ -5,13 +5,15 @@ const discardComments = require('postcss-discard-comments')
 
 const purgecssConfig = {
   // content: ['!(_site|node_modules)/**/*.+(html|js|md)', '*.html'],
-  content: ['./src/**/*.+(html|js|md)'],
+  content: ['./src/**/*.{html,js,md}'],
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+  // https://purgecss.com/safelisting.html#patterns
+  // https://regexr.com/
   safelist: {
     standard: [],
     deep: [],
     greedy: [],
   },
-  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 }
 
 module.exports = {

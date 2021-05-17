@@ -35,8 +35,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@fontsource/jost": "^4.3.0",
     "@fortawesome/fontawesome-free": "5.15.3",
-    "@openfonts/jost_latin": "0.0.2",
     "normalize.css": "8.0.1",
     "reset.css": "^2.0.2"
   },
@@ -53,7 +53,7 @@
     "postcss-discard-comments": "^5.0.0",
     "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.12",
+    "sass": "^1.32.13",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-twbs-bootstrap": "^2.2.0",
