@@ -3,6 +3,8 @@
 //
 
 :root {
+  height: 100%;
+  overflow: hidden;
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
@@ -15,11 +17,6 @@
   body {
     min-width: 320px;
   }
-}
-
-:root {
-  height: 100%;
-  overflow: hidden;
 }
 
 body {
@@ -40,7 +37,6 @@ body {
   background-position: center, center;
   background-size: cover, cover;
   -webkit-overflow-scrolling: touch;
-
   //-- font smoothing enabled --//
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
