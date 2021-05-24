@@ -3,8 +3,6 @@
 //
 
 :root {
-  height: 100%;
-  overflow: hidden;
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
@@ -12,17 +10,12 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  :root,
-  body {
-    min-width: 320px;
-  }
-}
-
 body {
+  width: 100vw; // cause a horizontal scroll bar, if height > 100vh
   min-width: 320px;
-  height: 100%;
-  overflow-x: hidden;
+  max-width: 100%; // 100vw bugfix, https://codepen.io/CiTA/pen/zYBmYBJ
+  min-height: 100vh;
+  overflow-x: hidden; // don't create horizontal scrollbar
   line-height: 1;
   word-wrap: break-word;
   background-color: #fafafa;
@@ -36,7 +29,7 @@ body {
   background-attachment: fixed;
   background-position: center, center;
   background-size: cover, cover;
-  -webkit-overflow-scrolling: touch;
+  // -webkit-overflow-scrolling: touch;
   //-- font smoothing enabled --//
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,8 +42,8 @@ body {
     left: 0;
     z-index: 1;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100vw; // 100% of viewport width
+    height: 100vh; // 100% of viewport height
     visibility: hidden;
     content: "";
     background-color: #c2d0d7;
@@ -58,10 +51,12 @@ body {
     transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
   }
 
+  // stylelint-disable selector-no-qualifying-type
   &.is-loading::before {
     visibility: visible;
     opacity: 1;
   }
+  // stylelint-enable selector-no-qualifying-type
 }
 
 .wrapper {
@@ -71,8 +66,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 1.25rem;
+  overflow: hidden; // hide overflow
   -webkit-overflow-scrolling: touch;
 
   &::before {
@@ -85,6 +81,9 @@ body {
   position: relative;
   z-index: 1;
   display: flex;
+  // flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 0;
   align-items: center;
   justify-content: center;
   max-width: 100%;
@@ -104,15 +103,15 @@ body {
 }
 
 .inner-wrapper {
-  width: 100%;
-  max-width: 23rem;
-  // padding: 3.125rem 2.5rem;
-  padding: 3.125rem 2.5rem 2.5rem;
-  overflow-x: hidden;
+  width: 23rem;
+  max-width: 100%;
+  padding: 3.125rem 2.5rem;
+  // padding: 3.125rem 2.5rem 2.5rem;
+  overflow-x: hidden; // hide overflow
 
   @media (max-width: 736px) {
-    // padding: 3rem 2rem;
-    padding: 3rem 2rem 2rem;
+    padding: 3rem 2rem;
+    // padding: 3rem 2rem 2rem;
   }
 
   > :first-child {
@@ -136,7 +135,7 @@ body {
   position: relative;
   display: block;
   max-width: 100%;
-  // overflow: hidden;
+  // overflow: hidden; // hide overflow
 
   &::before {
     position: absolute;
@@ -189,6 +188,7 @@ body {
 
 // Hero page icons
 
+// stylelint-disable selector-no-qualifying-type
 .hero-social {
   padding-left: 0;
   margin: 0.175em 0;
@@ -262,6 +262,7 @@ body {
     }
   }
 }
+// stylelint-enable selector-no-qualifying-type
 
 .site-footer {
   align-self: flex-end;
