@@ -7,46 +7,9 @@ layout: null
 
   {% include head.html %}
 
-  <body class="is-loading">
+  <body>
 
-    <div class="wrapper">
-
-      {{ content }}
-
-      <footer class="site-footer is-loading">
-
-        <ul class="site-footer-legal">
-          <li><!--
-            {% comment %}{% raw %}
-
-            -->{% include icons/pencil-alt.svg width="1em" height="1em" class="icon icon-pencil-alt" aria-label="Made" title="Made" %}<!--
-
-            --><span class="label">Made</span>&nbsp;<span class="footer-x">with</span>&nbsp;<!--
-
-            -->{% include icons/heart.svg width="1em" height="1em" class="icon icon-heart" aria-label="love" title="love" %}<!--
-
-            --><span class="label">love</span>&nbsp;<span class="footer-x">by</span>&nbsp;<!--
-
-            {% endraw %}{% endcomment %}
-            --><a href="https://milanaryal.com.np/">
-              {% include icons/m.svg width="1em" height="1em" class="icon icon-m animate--heartbeat" aria-label="Milan Aryal" title="Milan Aryal" %}
-              <span class="label">Milan Aryal</span>
-            </a><!--
-
-          --></li>
-        </ul>
-
-        {% comment %}{% raw %}<!-- {% assign site_title = site.title | default: site.name %}
-        {% if site_title %}
-          {% assign site_name = site_name | smartify | strip_html | normalize_whitespace | escape_once %}
-        {% endif %}
-        <ul class="site-footer-legal">
-          <li>&copy; {{ site_title }}</li>
-          <li>Design: <a href="https://milanaryal.com.np/">Milan Aryal</a></li>
-        </ul> -->{% endraw %}{% endcomment %}
-      </footer>
-
-    </div><!-- /.wrapper -->
+    {{ content }}
 
     {% include scripts.html %}
 

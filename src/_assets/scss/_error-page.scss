@@ -8,12 +8,12 @@
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  // background-color: #fafafa;
+  background-color: #fafafa;
 }
 
 .error-page-container {
   padding: 2em;
-  background-color: #fafafa;
+  background-color: darken(#fafafa, 3.333%);
   border-radius: 0.25rem; // 4px;
   transform: translateZ(0);
   animation: fade-in 2s;

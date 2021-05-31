@@ -1,0 +1,51 @@
+{% assign site_author = site.author.name | default: site.author | default: site.title | default: site.name %}
+{% if site_author %}
+  {% assign site_author = site_author | smartify | strip_html | strip_newlines | escape_once %}
+{% endif %}
+
+{% assign site_author_bio = site.author.bio | default: site.description %}
+{% if site_author_bio %}
+  {% assign site_author_bio = site_author_bio | smartify | strip_html | strip_newlines | truncate: 160 | escape_once %}
+{% endif %}
+
+{% assign site_author_avatar = site.author.avatar | default: site.logo.path | default: site.logo %}
+{% if site_author_avatar %}
+  {% assign site_author_avatar = site_author_avatar | escape %}
+{% endif %}
+
+<main class="hero-profile user-select-none is-loading" role="main">
+
+  <section class="inner-wrapper">
+
+      <span class="hero-avatar-wrapper">
+        <a class="hero-avatar" href="{{ '/' | relative_url }}">
+          <img class="hero-avatar-img" src="{{ site_author_avatar }}" alt="{{ site_author }}">
+        </a>
+      </span>
+
+      <h1 class="hero-title">{{ site_author }}</h1>
+
+      <p class="hero-description">{{ site_author_bio }}</p>
+
+      <ul class="hero-social">
+        {% if site.author.instagram %}<li><a class="icon-instagram" rel="me" href="https://instagram.com/{{ site.author.instagram }}">
+          {% include icons/instagram.svg width="1em" height="1em" class="svg" aria-label="Instagram" %}
+          <span class="label">Instagram</span>
+        </a></li>{% endif %}<!--
+z
+        -->{% if site.author.twitter %}<li><a class="icon-twitter" rel="me" href="https://twitter.com/{{ site.author.twitter }}">
+          {% include icons/twitter.svg width="1em" height="1em" class="svg" aria-label="Twitter" %}
+          <span class="label">Twitter</span></a></li>{% endif %}<!--
+
+        -->{% if site.author.facebook %}<li><a class="icon-facebook" rel="me" href="https://facebook.com/{{ site.author.facebook }}">
+          {% include icons/facebook-f.svg width="1em" height="1em" class="svg" aria-label="Facebook" %}
+          <span class="label">Facebook</span></a></li>{% endif %}<!--
+
+      -->{% if site.author.telegram %}<li><a class="icon-telegram" rel="me" href="https://t.me/{{ site.author.telegram }}">
+        {% include icons/telegram-plane.svg width="1em" height="1em" class="svg" aria-label="Telegram" %}
+        <span class="label">Telegram</span></a></li>{% endif %}
+      </ul>
+
+  </section>
+
+</main>

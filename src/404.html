@@ -1,54 +1,18 @@
 ---
-layout: null
+layout: error
 title: "Page not found"
 robots: "noindex, follow"
 sitemap: false
 permalink: "/404.html"
 ---
 
-<!doctype html>
-<html lang="{{ page.lang | replace:'-','_' | default: site.lang | default:'en' | downcase }}">
-
-  {%- assign site_title = site.title | default: site.name -%}
-  {%- if site_title -%}
-    {%- assign site_title = site_title | smartify | strip_html | normalize_whitespace | escape_once -%}
-  {%- endif -%}
-
-  {%- if page.title -%}
-    {%- assign page_title = page.title | smartify | strip_html | normalize_whitespace | escape_once -%}
-  {%- endif -%}
-
-  <head>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-    <title>{{ page_title }} / {{ site_title }}</title>
-
-    {% if page.robots %}
-      <meta name="robots" content="{{ page.robots }}" />
-    {% endif %}
-
-    <!-- Critical CSS -->
-    {% include styles.html %}
-
-  </head>
-
-  <body>
-
-    <!-- 404 main content -->
-    <div class="error-page text-center user-select-none">
-      <div class="error-page-container clearfix">
-        <div class="error-page-message error-page-message--lead animate--glitch">404</div>
-        <div class="error-page-message">😔 Sorry, but nothing exists here.</div>
-        <div class="error-page-message error-page-message--small">
-          Head over to the 🏠 <a href="{{ '/' | relative_url }}">homepage</a>.
-        </div>
-      </div><!-- /.error-page-container .clearfix -->
-    </div><!-- /.error-page -->
-
-    {% include scripts.html %}
-
-  </body>
-
-</html>
+<!-- 404 main content -->
+<div class="error-page">
+  <div class="error-page-container clearfix user-select-none text-center">
+    <div class="error-page-message error-page-message--lead animate--glitch">404</div>
+    <div class="error-page-message">😔 Sorry, but nothing exists here.</div>
+    <div class="error-page-message error-page-message--small">
+      Head over to the 🏠 <a href="{{ '/' | relative_url }}">homepage</a>.
+    </div>
+  </div><!-- /.error-page-container .clearfix -->
+</div><!-- /.error-page -->

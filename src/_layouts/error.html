@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ page.lang | replace:'-','_' | default: site.lang | default:'en' | downcase }}">
+
+  {% include head_no_seo.html %}
+
+  <body>
+
+    {{ content }}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

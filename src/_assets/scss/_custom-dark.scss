@@ -3,7 +3,7 @@
 //
 
 @media (prefers-color-scheme: dark) {
-  body {
+  .container {
     background-color: #222;
     background-image: linear-gradient(
         to top,
@@ -48,6 +48,10 @@
 
   .hero-description {
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  .error-page {
+    background-color: lighten(#222, 3.333%);
   }
 
   .error-page-container {

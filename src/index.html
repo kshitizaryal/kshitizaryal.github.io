@@ -3,54 +3,43 @@ layout: default
 permalink: "/"
 ---
 
-{% assign site_author = site.author.name | default: site.author | default: site.title | default: site.name %}
-{% if site_author %}
-  {% assign site_author = site_author | smartify | strip_html | strip_newlines | escape_once %}
-{% endif %}
+<div class="container is-loading">
+  <div class="wrapper">
 
-{% assign site_author_bio = site.author.bio | default: site.description %}
-{% if site_author_bio %}
-  {% assign site_author_bio = site_author_bio | smartify | strip_html | strip_newlines | truncate: 160 | escape_once %}
-{% endif %}
+    {% include card.html %}
 
-{% assign site_author_avatar = site.author.avatar | default: site.logo.path | default: site.logo %}
-{% if site_author_avatar %}
-  {% assign site_author_avatar = site_author_avatar | escape %}
-{% endif %}
+    <footer class="site-footer is-loading">
 
-<main class="hero-profile user-select-none is-loading" role="main">
+      <ul class="site-footer-legal">
+        <li><!--
+          {% comment %}{% raw %}
 
-  <section class="inner-wrapper">
+          -->{% include icons/pencil-alt.svg width="1em" height="1em" class="icon icon-pencil-alt" aria-label="Made" title="Made" %}<!--
 
-      <span class="hero-avatar-wrapper">
-        <a class="hero-avatar" href="{{ '/' | relative_url }}">
-          <img class="hero-avatar-img" src="{{ site_author_avatar }}" alt="{{ site_author }}">
-        </a>
-      </span>
+          --><span class="label">Made</span>&nbsp;<span class="footer-x">with</span>&nbsp;<!--
 
-      <h1 class="hero-title">{{ site_author }}</h1>
+          -->{% include icons/heart.svg width="1em" height="1em" class="icon icon-heart" aria-label="love" title="love" %}<!--
 
-      <p class="hero-description">{{ site_author_bio }}</p>
+          --><span class="label">love</span>&nbsp;<span class="footer-x">by</span>&nbsp;<!--
 
-      <ul class="hero-social">
-        {% if site.author.instagram %}<li><a class="icon-instagram" rel="me" href="https://instagram.com/{{ site.author.instagram }}">
-          {% include icons/instagram.svg width="1em" height="1em" class="svg" aria-label="Instagram" %}
-          <span class="label">Instagram</span>
-        </a></li>{% endif %}<!--
-z
-        -->{% if site.author.twitter %}<li><a class="icon-twitter" rel="me" href="https://twitter.com/{{ site.author.twitter }}">
-          {% include icons/twitter.svg width="1em" height="1em" class="svg" aria-label="Twitter" %}
-          <span class="label">Twitter</span></a></li>{% endif %}<!--
+          {% endraw %}{% endcomment %}
+          --><a href="https://milanaryal.com.np/">
+            {% include icons/m.svg width="1em" height="1em" class="icon icon-m animate--heartbeat" aria-label="Milan Aryal" title="Milan Aryal" %}
+            <span class="label">Milan Aryal</span>
+          </a><!--
 
-        -->{% if site.author.facebook %}<li><a class="icon-facebook" rel="me" href="https://facebook.com/{{ site.author.facebook }}">
-          {% include icons/facebook-f.svg width="1em" height="1em" class="svg" aria-label="Facebook" %}
-          <span class="label">Facebook</span></a></li>{% endif %}<!--
-
-      -->{% if site.author.telegram %}<li><a class="icon-telegram" rel="me" href="https://t.me/{{ site.author.telegram }}">
-        {% include icons/telegram-plane.svg width="1em" height="1em" class="svg" aria-label="Telegram" %}
-        <span class="label">Telegram</span></a></li>{% endif %}
+        --></li>
       </ul>
 
-  </section>
+      {% comment %}{% raw %}<!-- {% assign site_title = site.title | default: site.name %}
+      {% if site_title %}
+        {% assign site_name = site_name | smartify | strip_html | normalize_whitespace | escape_once %}
+      {% endif %}
+      <ul class="site-footer-legal">
+        <li>&copy; {{ site_title }}</li>
+        <li>Design: <a href="https://milanaryal.com.np/">Milan Aryal</a></li>
+      </ul> -->{% endraw %}{% endcomment %}
+    </footer>
 
-</main>
+  </div><!-- /.wrapper -->
+</div><!-- /.container -->

@@ -1,7 +1,3 @@
-//
-// Hero page
-//
-
 :root {
   font-size: 16px;
 
@@ -10,9 +6,13 @@
   }
 }
 
-body {
+//
+// Hero page
+//
+
+.container {
   width: 100vw; // cause a horizontal scroll bar, if height > 100vh
-  min-width: 320px;
+  // min-width: 320px;
   max-width: 100%; // 100vw bugfix, https://codepen.io/CiTA/pen/zYBmYBJ
   min-height: 100vh;
   overflow-x: hidden; // don't create horizontal scrollbar
