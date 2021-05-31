@@ -51,11 +51,11 @@
   }
 
   .error-page {
-    background-color: lighten(#222, 3.333%);
+    background-color: #222;
   }
 
   .error-page-container {
-    background-color: #222;
+    background-color: lighten(#222, 3.333%);
   }
 
   .error-page-message {

@@ -1,9 +1,18 @@
 :root {
+  --body-bg: #fafafa;
   font-size: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
   }
+
+  @media (prefers-color-scheme: dark) {
+    --body-bg: #111;
+  }
+}
+
+body {
+  background-color: var(--body-bg);
 }
 
 //
