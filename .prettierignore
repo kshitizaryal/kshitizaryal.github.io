@@ -4,3 +4,4 @@
 _site/
 src/_includes/
 src/assets/
+package-lock.json
