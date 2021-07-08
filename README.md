@@ -11,7 +11,7 @@
 
 </div><br />
 
-The uncompiled [Jekyll](https://jekyllrb.com/) source code for _[kshitizaryal.com.np](https://kshitizaryal.com.np/)_. Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of _Kshitiz Aryal_.
+The uncompiled [Jekyll](https://jekyllrb.com/) source code for <https://kshitizaryal.com.np/>. Please learn, read, and use any code from this website. All content despite being hosted openly is subject to copyright of _Kshitiz Aryal_.
 
 ---
 
