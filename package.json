@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@fontsource/jost": "^4.5.0",
-    "@fortawesome/fontawesome-free": "5.15.3",
+    "@fortawesome/fontawesome-free": "5.15.4",
     "normalize.css": "8.0.1",
     "reset.css": "^2.0.2"
   },
