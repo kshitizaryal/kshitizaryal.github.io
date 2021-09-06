@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "autoprefixer": "^10.3.2",
+    "autoprefixer": "^10.3.4",
     "browser-sync": "^2.27.5",
     "chokidar-cli": "^3.0.0",
     "cpy-cli": "^3.1.1",
@@ -53,7 +53,7 @@
     "postcss-cli": "^8.3.1",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "sass": "^1.38.1",
+    "sass": "^1.39.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-twbs-bootstrap": "^2.2.3",
