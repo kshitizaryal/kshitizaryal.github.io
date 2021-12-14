@@ -249,6 +249,18 @@ body {
       border: solid 1px #fff;
     }
 
+    &.icon-youtube:hover {
+      color: $social-youtube-color;
+      background-color: $social-youtube-color;
+      border: solid 1px #fff;
+    }
+
+    &.icon-tiktok:hover {
+      color: $social-tiktok-color;
+      background-color: $social-tiktok-color;
+      border: solid 1px #fff;
+    }
+
     &.icon-telegram:hover {
       color: $social-telegram-color;
       background-color: $social-telegram-color;
