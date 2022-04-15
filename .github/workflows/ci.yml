@@ -74,7 +74,7 @@ jobs:
             || true
 
       - name: Upload site
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: success() && github.repository == 'KshitizAryal/kshitizaryal.github.io' && github.ref == 'refs/heads/main'
         with:
           name: site
