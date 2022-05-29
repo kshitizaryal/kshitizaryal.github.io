@@ -49,7 +49,7 @@ source: src
 # the HTML language tag › https://www.w3.org/International/questions/qa-choosing-language-tags
 # lang: "en-US"
 
-# Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
+# Change to your timezone › https://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: "Asia/Kathmandu"
 
 defaults:
