@@ -27,7 +27,7 @@ author:
   github: "KshitizAryal"
 
 # Google Analytics ID
-google_analytics_id: "UA-120293538-1"
+google_analytics_id: null
 
 # SEO › jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 twitter:
