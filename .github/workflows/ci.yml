@@ -64,14 +64,14 @@ jobs:
         run: |
           bundle exec htmlproofer "./_site/" \
           --allow-hash-href \
-            --assume-extension \
-            --check-external-hash \
-            --check-img-http \
-            --file_ignore "/.+\/googlee4c04c6c1f8d6f74.html/" \
-            --internal-domains "kshitizaryal.com.np" \
-            --http-status-ignore "403,429" \
-            --only-4xx \
-            || true
+          --assume-extension \
+          --check-external-hash \
+          --check-img-http \
+          --file_ignore "/.+\/googlee4c04c6c1f8d6f74.html/" \
+          --internal-domains "kshitizaryal.com.np" \
+          --http-status-ignore "403,429" \
+          --only-4xx \
+          || true
 
       - name: Upload site
         uses: actions/upload-artifact@v3
@@ -101,10 +101,10 @@ jobs:
           path: ./_site/
 
       - name: List files and folders
-        run: ls "./"
+        run: ls .
 
       - name: List site files and folders
-        run: ls "./_site/"
+        run: ls ./_site/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
