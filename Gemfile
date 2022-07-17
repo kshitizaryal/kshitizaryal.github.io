@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "html-proofer", "~> 3.19"
+gem "html-proofer", "~> 4.1"
 gem "jekyll", "~> 4.2"
 gem "webrick", "~> 1.7" # https://github.com/jekyll/jekyll/issues/8523
 
