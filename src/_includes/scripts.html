@@ -25,13 +25,14 @@
 
 {% unless site.url != "https://kshitizaryal.com.np" %}
   {%- comment -%}
-    <!--
+  <!--
       Please replace with your own site
       Goolge Analytics Measurement ID (G-XXXXXXXXXX)
-    -->
+  -->
   {%- endcomment -%}
   {%- assign GA_MEASUREMENT_ID = "G-XL7NSNXQVX" -%}
 {% endunless %}
+
 {% if GA_MEASUREMENT_ID and jekyll.environment == "production" %}
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{- GA_MEASUREMENT_ID -}}"></script>
