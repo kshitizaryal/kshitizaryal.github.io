@@ -7,7 +7,7 @@
 <p align="center">Source code for <a href="https://kshitizaryal.com.np/">kshitizaryal.com.np</a></p>
 <div align="center">
 
-[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions?workflow=CI)
+[![Build Status](https://github.com/KshitizAryal/kshitizaryal.github.io/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/KshitizAryal/kshitizaryal.github.io/actions?workflow=pages)
 
 </div><br />
 

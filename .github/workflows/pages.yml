@@ -37,9 +37,10 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.1" # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          # Not needed with a .ruby-version file
+          ruby-version: "3.1"
+          # Runs 'bundle install' and caches installed gems automatically
+          bundler-cache: true
 
       - name: Version info
         run: |
@@ -55,7 +56,8 @@ jobs:
         run: bundle exec jekyll doctor
 
       - name: Build with Jekyll
-        run: JEKYLL_ENV=production bundle exec jekyll build --profile --trace --verbose # defaults output to '/_site'
+        # Defaults output to '/_site'
+        run: JEKYLL_ENV=production bundle exec jekyll build --profile --trace --verbose
 
       # - name: Install Minify deb package on Ubuntu
       #   if: matrix.os == 'ubuntu-latest'
@@ -86,7 +88,8 @@ jobs:
             || true
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1 # This will automatically upload an artifact from the '/_site' directory
+        # This will automatically upload an artifact from the '/_site' directory
+        uses: actions/upload-pages-artifact@v1
         if: success() && github.repository == 'KshitizAryal/kshitizaryal.github.io' && github.ref == 'refs/heads/main'
         with:
           path: ./_site/
