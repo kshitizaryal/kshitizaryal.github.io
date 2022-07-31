@@ -34,10 +34,8 @@ jobs:
       - name: Install Minify CLI
         run: |
           wget -O ${{ runner.temp }}/minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.12.0/minify_linux_arm64.tar.gz \
-          && sudo tar -xvzf ${{ runner.temp }}/minify.tar.gz \
-          sudo ${{ runner.temp }} ls -l \
-          sudo mv ${{ runner.temp }}/minify $HOME/.local/minify/bin \
-          export PATH="$HOME/.local/minify/bin:$PATH" \
+          && sudo tar -xvzf ${{ runner.temp }}/minify.tar.gz -C $HOME/.local/minify/bin \
+          && export PATH="$HOME/.local/minify/bin:$PATH" \
           minify --version
       - name: Checkout
         uses: actions/checkout@v3
