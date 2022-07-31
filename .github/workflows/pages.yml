@@ -33,7 +33,7 @@ jobs:
     steps:
       - name: Install Minify CLI
         run: |
-          mkdir -P ${{ runner.temp }}/minify/bin \
+          mkdir -p ${{ runner.temp }}/minify/bin \
           wget -O ${{ runner.temp }}/minify/bin/minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.12.0/minify_linux_arm64.tar.gz \
           && sudo tar -xvzf ${{ runner.temp }}/minify/bin/minify.tar.gz \
           && export PATH="${{ runner.temp }}/minify/bin/:$PATH" \
