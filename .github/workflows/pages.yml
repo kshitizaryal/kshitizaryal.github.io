@@ -31,14 +31,6 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - name: Install Minify CLI
-        run: |
-          sudo mkdir -p ${{ runner.temp }}/minify/bin \
-          && sudo wget -O ${{ runner.temp }}/minify/bin/minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.12.0/minify_linux_arm64.tar.gz \
-          && sudo tar -xvzf ${{ runner.temp }}/minify/bin/minify.tar.gz \
-          && export PATH="${{ runner.temp }}/minify/bin:$PATH" \
-          && source ~/.bashrc \
-          && minify --version
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -72,10 +64,10 @@ jobs:
       #   run: apt-get update && apt-get install --no-install-recommends --yes minify
 
       # https://github.com/tdewolff/homebrew-tap/
-      #- name: Install Minify using Homebrew
-      #  run: |
-      #    brew install go
-      #    brew install tdewolff/tap/minify
+      - name: Install Minify using Homebrew
+        run: |
+          brew install go
+          brew install tdewolff/tap/minify
 
       # https://github.com/tdewolff/minify/tree/master/cmd/minify#usage
       - name: Minify HTML files
