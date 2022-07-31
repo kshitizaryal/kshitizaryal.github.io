@@ -57,6 +57,7 @@ jobs:
 
       - name: Build with Jekyll
         # Defaults output to '/_site'
+        # run: bundle exec jekyll build --baseurl ${{ steps.pages.outputs.base_path }}
         run: JEKYLL_ENV=production bundle exec jekyll build --profile --trace --verbose
 
       # - name: Install Minify deb package on Ubuntu
