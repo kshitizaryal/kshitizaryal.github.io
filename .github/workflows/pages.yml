@@ -71,10 +71,15 @@ jobs:
       # https://github.com/tdewolff/homebrew-tap/
       - name: Install Minify using Homebrew
         run: |
-          brew install go || true
-          brew link --overwrite --dry-run go || true
-          brew link --overwrite go || true
-          brew install tdewolff/tap/minify
+          brew install goenv
+          echo 'eval "$(goenv init -)"' >> ~/.zprofile
+          goenv install 1.19.3
+          goenv global 1.19.3
+        # run: |
+          # brew install go || true
+          # brew link --overwrite --dry-run go || true
+          # brew link --overwrite go || true
+          # brew install tdewolff/tap/minify
 
       # https://github.com/tdewolff/minify/tree/master/cmd/minify#usage
       - name: Minify HTML files
