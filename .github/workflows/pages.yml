@@ -73,8 +73,8 @@ jobs:
         run: |
           brew install goenv
           echo 'eval "$(goenv init -)"' >> ~/.zprofile
-          goenv install 1.19.3
-          goenv global 1.19.3
+          goenv install 1.19.2
+          goenv global 1.19.2
         # run: |
           # brew install go || true
           # brew link --overwrite --dry-run go || true
