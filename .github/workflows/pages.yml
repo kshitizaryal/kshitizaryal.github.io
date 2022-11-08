@@ -74,8 +74,6 @@ jobs:
           echo 'eval "$(goenv init -)"' >> ~/.zprofile
           goenv install 1.19.2
           goenv global 1.19.2
-          which go
-          go --version
         # run: |
           # brew install go || true
           # brew link --overwrite --dry-run go || true
