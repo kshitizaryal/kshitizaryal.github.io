@@ -74,14 +74,15 @@ jobs:
           echo 'eval "$(goenv init -)"' >> ~/.zprofile
           goenv install 1.19.2
           goenv global 1.19.2
+          brew install tdewolff/tap/minify
         # run: |
           # brew install go || true
           # brew link --overwrite --dry-run go || true
           # brew link --overwrite go || true
 
       # https://github.com/tdewolff/homebrew-tap/
-      - name: Install Minify using Homebrew
-        run: docker pull tdewolff/minify # brew install tdewolff/tap/minify
+      #- name: Install Minify using Homebrew
+      #  run: brew install tdewolff/tap/minify
 
       # https://github.com/tdewolff/minify/tree/master/cmd/minify#usage
       - name: Minify HTML files
