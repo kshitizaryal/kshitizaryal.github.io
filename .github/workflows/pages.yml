@@ -112,7 +112,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     needs: build
     if: ${{ github.repository == 'KshitizAryal/kshitizaryal.github.io' && github.ref == 'refs/heads/main' }}
     steps:
