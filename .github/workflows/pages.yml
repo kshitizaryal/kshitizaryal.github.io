@@ -70,8 +70,8 @@ jobs:
 
       - name: Setup Go using Homebrew
         run: |
-          brew unlink go || true
           brew install go || true
+          brew unlink go || true
           brew link --overwrite --dry-run go || true
           brew link --overwrite go || true
 
