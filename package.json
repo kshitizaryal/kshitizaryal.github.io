@@ -58,7 +58,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-twbs-bootstrap": "^7.0.0",
-    "stylelint-prettier": "^2.0.0"
+    "stylelint-prettier": "^3.0.0"
   },
   "main": "_site/index.html",
   "repository": {
