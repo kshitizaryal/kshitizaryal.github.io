@@ -35,6 +35,11 @@ params:
       - https://twitter.com/KshitizAryal
       - https://www.instagram.com/considerkshitiz/
 
+minify:
+  tdewolff:
+    html:
+      keepQuotes: true
+
 module:
   mounts:
     - source: src/assets
