@@ -35,7 +35,7 @@
       },
       "name": "{{ .Site.Title }}"
     },
-    "sameAs": {{ .Site.Params.social.links | jsonify }},
+    "sameAs": {{ .Site.Params.social.links }},
     "url": "{{ .Permalink }}"
   }
 </script>
@@ -51,6 +51,6 @@
     "image": "{{- with $.Site.Params.images }}{{ index . 0 | absURL }}{{ end -}}",
     "nationality": "Nepal",
     "url": "{{ "/" | absURL }}",
-    "sameAs": {{ .Site.Params.social.links | jsonify }}
+    "sameAs": {{ .Site.Params.social.links }}
   }
 </script>

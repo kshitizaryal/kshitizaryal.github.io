@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://kshitizaryal.com.np/">
-    <img width="120px" height="120px" alt="Kshitiz Aryal" src="src/assets/img/avatar.png" />
+    <img width="120px" height="120px" alt="Kshitiz Aryal" src="src/static/assets/img/avatar.png" />
   </a>
 </p>
 <h3 align="center">Kshitiz Aryal</h3>
