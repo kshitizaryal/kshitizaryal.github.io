@@ -8,7 +8,7 @@ on:
     paths-ignore:
       - "**"
       - "!.github/workflows/**"
-      - "!config.yml"
+      - "!hugo.yml"
       - "!src/**"
 
   # Allows you to run this workflow manually from the Actions tab
@@ -31,7 +31,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.111.2"
+      HUGO_VERSION: "0.110.0"
 
     steps:
       - name: Install Hugo CLI
