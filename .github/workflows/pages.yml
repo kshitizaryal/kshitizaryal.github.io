@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Install Hugo CLI
-        run: brew install hugo@0.111.2
+        run: brew install hugo
 
       - name: Version info
         run: |
