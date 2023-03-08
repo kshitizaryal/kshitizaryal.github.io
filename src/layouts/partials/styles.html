@@ -1,0 +1,10 @@
+{{- $style := resources.Get "css/style.css" | resources.Copy "assets/css/style.css" -}}
+
+{{ if hugo.IsProduction }}
+  {{ with $style | minify }}
+  {{- $styleDataHref := "assets/css/style.css" | absURL -}}
+  <style data-href="{{ $styleDataHref }}">{{- .Content | safeCSS -}}</style>
+  {{ end }}
+{{ else }}
+  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" />
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div class="container is-loading">
+  <div class="wrapper">
+
+    {{ partial "card.html" . }}
+
+    <footer class="site-footer is-loading">
+
+      <ul class="site-footer-legal">
+        <li><!--
+
+          --><a rel="sibling" href="https://milanaryal.com.np/">
+            {{ partial "icons/m.svg" (dict "class" "icon icon-m animate--heartbeat" "width" "1em" "height" "1em" "ariaLabel" "Milan Aryal" "title" "Milan Aryal") }}
+            <span class="label">Milan Aryal</span>
+          </a><!--
+
+        --></li>
+      </ul>
+
+      {{/* <!--
+      <ul class="site-footer-legal">
+        <li>&copy; {{ .Site.Title }}</li>
+        <li>Design: <a href="https://milanaryal.com.np/">Milan Aryal</a></li>
+      </ul> --> */}}
+    </footer>
+
+  </div>{{ "<!-- /.wrapper -->" | safeHTML }}
+</div>{{ "<!-- /.container -->" | safeHTML }}
+{{ end }}

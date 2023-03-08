@@ -1,7 +1,9 @@
 **/*.min.css
+**/*.css.map
 **/vendor/
 **/_variables.scss
 _site/
-src/_includes/
-src/assets/
+src/static/
+src/assets/css/
+src/assets/js/
 package-lock.json

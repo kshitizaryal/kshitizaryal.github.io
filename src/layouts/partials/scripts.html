@@ -1,0 +1,31 @@
+<script>console.log('Hello world!');</script>
+
+<script>
+  var el = document.querySelectorAll(".container, .hero-profile, .Site-footer");
+
+  window.onload = function () {
+    var i;
+    for (i = 0; i < el.length; i++) {
+      el[i].classList.remove("is-loading");
+    }
+  };
+</script>
+
+{{ if and (.Site.GoogleAnalytics) (hugo.IsProduction) }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+
+{{ if and (eq .Site.BaseURL "https://kshitizaryal.com.np") (hugo.IsProduction) }}
+{{/* <!-- Please replace with your own site Goolge Analytics Measurement ID (G-XXXXXXXXXX) --> */}}
+{{ $GA_MEASUREMENT_ID := "G-XL7NSNXQVX" }}
+
+{{/* <!-- Global site tag (gtag.js) - Google Analytics --> */}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{- $GA_MEASUREMENT_ID -}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{- $GA_MEASUREMENT_ID -}}');
+</script>
+{{ end }}

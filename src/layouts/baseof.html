@@ -1,0 +1,15 @@
+<!doctype html>
+<html{{ with .Site.LanguageCode | default .Site.Language.Lang }} lang="{{ . }}"{{ end }} prefix="og: https://ogp.me/ns#">
+
+  {{ partial "head.html" . }}
+
+  <body>
+
+    {{ block "main" . }}
+    {{ end }}
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+
+</html>

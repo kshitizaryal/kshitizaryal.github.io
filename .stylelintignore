@@ -1,5 +1,7 @@
 **/*.min.css
+**/*.css.map
 **/vendor/
-src/assets/
-src/_includes/
+src/assets/css/
+src/assets/js/
+src/static/
 _site/

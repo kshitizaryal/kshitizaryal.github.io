@@ -1,0 +1,49 @@
+languageCode: "en"
+title: "Kshitiz Aryal"
+baseURL: "https://kshitizaryal.com.np"
+metaDataFormat: "yaml"
+publishDir: "_site"
+disableKinds: ["RSS", "taxonomy", "term"]
+googleAnalytics: null
+timeZone: "Asia/Kathmandu"
+
+permalinks:
+  aliases: /:filename/
+
+params:
+  author: "Kshitiz Aryal"
+  bio: "Life is like riding a bike. To keep your balance, you must keep moving."
+  description: >
+    Hey -- this is Kshitiz Aryal, who loves traveling new places and
+    listening music a lot. I am based in Kathmandu, Nepal.
+  gender: "Male"
+  locale: en_US
+  images:
+    - /assets/img/avatar.png
+  logo:
+    - /assets/img/avatar.png
+
+  social:
+    facebook: null
+    instagram: "considerkshitiz"
+    youtube: "considerkshitiz"
+    tiktok: "considerkshitij"
+    telegram: null
+    twitter: "KshitizAryal"
+    github: "KshitizAryal"
+    links:
+      - https://twitter.com/KshitizAryal
+      - https://www.instagram.com/considerkshitiz/
+
+module:
+  mounts:
+    - source: src/assets
+      target: assets
+    - source: src/content
+      target: content
+    - source: src/data
+      target: data
+    - source: src/layouts
+      target: layouts
+    - source: src/static
+      target: static

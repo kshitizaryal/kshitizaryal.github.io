@@ -1,0 +1,61 @@
+<main class="hero-profile user-select-none is-loading" role="main">
+
+  <section class="inner-wrapper">
+
+      <span class="hero-avatar-wrapper">
+        <a class="hero-avatar" href="{{ "/" | relURL }}">
+          <img class="hero-avatar-img" src="{{- with $.Site.Params.images }}{{ index . 0 | relURL }}{{ end -}}" alt="{{ .Site.Params.author }}">
+        </a>
+      </span>
+
+      <h1 class="hero-title">{{ .Site.Params.author }}</h1>
+
+      <p class="hero-description">{{ .Site.Params.bio | markdownify | truncate 160 }}</p>
+
+      <ul class="hero-social">
+        {{ if .Site.Params.social.instagram }}<li>
+          <a class="icon-instagram" rel="me" href="https://www.instagram.com/{{- .Site.Params.social.instagram -}}/">
+            {{ partial "icons/instagram.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "Instagram") }}
+            <span class="label">Instagram</span>
+          </a>
+        </li>{{ end }}<!--
+
+        -->{{ if .Site.Params.social.tiktok }}<li>
+          <a class="icon-tiktok" rel="me" href="https://www.tiktok.com/@{{- .Site.Params.social.tiktok -}}?lang=en">
+            {{ partial "icons/tiktok.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "TikTok") }}
+            <span class="label">TikTok</span>
+          </a>
+        </li>{{ end }}<!--
+
+        -->{{ if .Site.Params.social.youtube }}<li>
+          <a class="icon-youtube" rel="me" href="https://www.youtube.com/{{- .Site.Params.social.youtube -}}">
+            {{ partial "icons/youtube.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "YouTube") }}
+            <span class="label">YouTube</span>
+          </a>
+        </li>{{ end }}<!--
+
+        -->{{ if .Site.Params.social.twitter }}<li>
+          <a class="icon-twitter" rel="me" href="https://twitter.com/{{- .Site.Params.social.twitter -}}">
+            {{ partial "icons/twitter.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "Twitter") }}
+            <span class="label">Twitter</span>
+          </a>
+        </li>{{ end }}<!--
+
+        -->{{ if .Site.Params.social.facebook }}<li>
+          <a class="icon-facebook" rel="me" href="https://www.facebook.com/{{- .Site.Params.social.facebook -}}">
+            {{ partial "icons/facebook.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "Facebook") }}
+            <span class="label">Facebook</span>
+          </a>
+        </li>{{ end }}<!--
+
+        -->{{ if .Site.Params.social.telegram }}<li>
+          <a class="icon-telegram" rel="me" href="https://t.me/{{- .Site.Params.social.telegram -}}">
+            {{ partial "icons/telegram-plane.svg" (dict "class" "svg" "width" "1em" "height" "1em" "ariaLabel" "Telegram") }}
+            <span class="label">Telegram</span>
+          </a>
+        </li>{{ end }}
+      </ul>
+
+  </section>
+
+</main>

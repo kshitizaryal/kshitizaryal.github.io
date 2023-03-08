@@ -3,8 +3,8 @@
 # Useful .gitignore templates: https://github.com/github/gitignore
 
 # ----------------------------------------------------------------------
-# Created by https://www.gitignore.io/api/archives,git,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
-# Edit at https://www.gitignore.io/?templates=archives,git,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
+# Created by https://www.gitignore.io/api/archives,git,hugo,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
+# Edit at https://www.gitignore.io/?templates=archives,git,hugo,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
 
 ### Archives ###
 # It's better to unpack these files and commit the raw source because
@@ -54,6 +54,21 @@
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
+
+### Hugo ###
+# Generated files by hugo
+/public/
+/resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
 
 ### Jekyll ###
 _site/
@@ -369,12 +384,14 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/archives,git,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
+# End of https://www.toptal.com/developers/gitignore/api/archives,git,hugo,jekyll,linux,macos,microsoftoffice,node,ruby,visualstudiocode,windows
 
 # ----------------------------------------------------------------------
 # | Miscellaneous                                                      |
 # ----------------------------------------------------------------------
 
+_site/
+resources/
 Gemfile.lock
 package-lock.json
 

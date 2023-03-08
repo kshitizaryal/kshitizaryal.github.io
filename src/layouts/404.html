@@ -1,0 +1,35 @@
+<!doctype html>
+<html{{ with .Site.LanguageCode | default .Site.Language.Lang }} lang="{{ . }}"{{ end }} prefix="og: https://ogp.me/ns#">
+
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <title>Page not found | {{ .Site.Title | markdownify }}</title>
+
+  <meta name="robots" content="noindex, follow" />
+
+  {{ "<!-- Critical CSS -->" | safeHTML }}
+  {{ partial "styles.html" . }}
+
+</head>
+
+  <body>
+
+    {{ "<!-- 404 main content -->" | safeHTML }}
+    <div class="error-page">
+      <div class="error-page-container clearfix user-select-none text-center">
+        <div class="error-page-message error-page-message--lead animate--glitch">404</div>
+        <div class="error-page-message">😔 Sorry, but nothing exists here.</div>
+        <div class="error-page-message error-page-message--small">
+          Head over to the 🏠 <a href="/">homepage</a>.
+        </div>
+      </div><!-- /.error-page-container .clearfix -->
+    </div><!-- /.error-page -->
+
+    {{ partial "scripts.html" . }}
+
+  </body>
+
+</html>

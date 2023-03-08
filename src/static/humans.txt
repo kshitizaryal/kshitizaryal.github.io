@@ -1,0 +1,25 @@
+ ____  __.       .__    .__  __  .__            _____                       .__
+|    |/ _|  _____|  |__ |__|/  |_|__|_______   /  _  \_______ ___.__._____  |  |
+|      <   /  ___/  |  \|  \   __\  \___   /  /  /_\  \_  __ <   |  |\__  \ |  |
+|    |  \  \___ \|   Y  \  ||  | |  |/    /  /    |    \  | \/\___  | / __ \|  |__
+|____|__ \/____  >___|  /__||__| |__/_____ \ \____|__  /__|   / ____|(____  /____/
+        \/     \/     \/                  \/         \/       \/          \/
+
+/* TEAM */
+
+  Web admin: Kshitiz Aryal
+  Twitter: @KshitizAryal <https://twitter.com/KshitizAryal>
+  GitHub: @KshitizAryal <https://github.com/KshitizAryal>
+  Location: Kathmandu, Nepal
+
+  Web designer: Milan Aryal
+  Twitter: @MilanAryal <https://twitter.com/MilanAryal>
+  GitHub: @MilanAryal <https://twitter.com/MilanAryal>
+  Location: Kathmandu, Nepal
+
+/* SITE */
+
+  Language: English
+  Standards: HTML5, CSS3
+  Components: Hugo <https://gohugo.io/>
+  IDE: Visual Studio Code <https://code.visualstudio.com/>
