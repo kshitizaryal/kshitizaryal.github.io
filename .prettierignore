@@ -1,5 +1,4 @@
 **/*.min.css
-**/*.css.map
 **/vendor/
 **/_variables.scss
 _site/

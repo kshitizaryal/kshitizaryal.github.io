@@ -1,5 +1,4 @@
 **/*.min.css
-**/*.css.map
 **/vendor/
 src/assets/css/
 src/assets/js/
