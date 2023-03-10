@@ -1,5 +1,6 @@
 baseURL: "https://kshitizaryal.com.np"
 disableKinds: ["RSS", "taxonomy", "term"]
+enableRobotsTXT: true
 googleAnalytics: null
 languageCode: "en"
 metaDataFormat: "yaml"
@@ -32,11 +33,11 @@ params:
     Hey -- this is Kshitiz Aryal, who loves traveling new places and
     listening music a lot. I am based in Kathmandu, Nepal.
   gender: "Male"
-  locale: en_US
+  locale: "en_US"
   images:
-    - /assets/img/avatar.png
+    - "/assets/img/avatar.png"
   logo:
-    - /assets/img/avatar.png
+    - "/assets/img/avatar.png"
   social:
     facebook: null
     instagram: "considerkshitiz"
@@ -46,8 +47,8 @@ params:
     twitter: "KshitizAryal"
     github: "KshitizAryal"
     links:
-      - https://twitter.com/KshitizAryal
-      - https://www.instagram.com/considerkshitiz/
+      - "https://twitter.com/KshitizAryal"
+      - "https://www.instagram.com/considerkshitiz/"
 
 permalinks:
   aliases: /:filename/
