@@ -1,15 +1,18 @@
+<title>{{ if .IsHome }}{{ .Site.Title | markdownify }}{{ else }}{{ .Title | markdownify }} | {{ .Site.Title | markdownify }}{{ end }}</title>
+
 <meta name="generator" content="Hugo v{{ hugo.Version }}" />
+<meta name="title" content="{{ if .IsHome }}{{ .Site.Title | markdownify }}{{ else }}{{ .Title | markdownify }}{{ end }}" />
+<meta name="description" content="{{ with .Description }}{{ . | markdownify | truncate 160 }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | truncate 160 }}{{ end }}{{ end }}{{ end }}" />
 <meta name="author" content="{{ .Site.Params.author }}" />
 <link rel="canonical" href="{{ .Permalink }}" />
-<meta name="description" content="{{ with .Description }}{{ . | markdownify | truncate 160 }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | truncate 160 }}{{ end }}{{ end }}{{ end }}" />
 
-<meta property="og:title" content="{{ .Title }}" />
-<meta property="og:locale" content="{{ .Site.Params.locale }}" />
-<meta property="og:description" content="{{ with .Description }}{{ . | markdownify | truncate 160 }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | truncate 160 }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:image" content="{{- with $.Site.Params.images }}{{ index . 0 | absURL }}{{ end -}}" />
 <meta property="og:type" content="website" />
+<meta property="og:locale" content="{{ .Site.Params.locale }}" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . | markdownify | truncate 160 }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . | markdownify | truncate 160 }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:image" content="{{- with $.Site.Params.images }}{{ index . 0 | absURL }}{{ end -}}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@{{ .Site.Params.social.twitter }}" />

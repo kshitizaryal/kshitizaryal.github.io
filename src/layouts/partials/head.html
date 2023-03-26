@@ -12,8 +12,6 @@
   {{ "<!-- Critical CSS -->" | safeHTML }}
   {{ partial "styles.html" . }}
 
-  <title>{{ if .IsHome }}{{ .Site.Title | markdownify }}{{ else }}{{ .Title | markdownify }} | {{ .Site.Title | markdownify }}{{ end }}</title>
-
   {{/* SEO tag */}}
   {{ partial "seo-tag.html" . }}
 
