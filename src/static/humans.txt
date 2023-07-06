@@ -8,13 +8,13 @@
 /* TEAM */
 
   Web admin: Kshitiz Aryal
-  Twitter: @KshitizAryal <https://twitter.com/KshitizAryal>
-  GitHub: @KshitizAryal <https://github.com/KshitizAryal>
+  Twitter: @kshitizaryal <https://twitter.com/kshitizaryal>
+  GitHub: @kshitizaryal <https://github.com/kshitizaryal>
   Location: Kathmandu, Nepal
 
   Web designer: Milan Aryal
-  Twitter: @MilanAryal <https://twitter.com/MilanAryal>
-  GitHub: @MilanAryal <https://twitter.com/MilanAryal>
+  Twitter: @milanaryal <https://twitter.com/milanaryal>
+  GitHub: @milanaryal <https://twitter.com/milanaryal>
   Location: Kathmandu, Nepal
 
 /* SITE */

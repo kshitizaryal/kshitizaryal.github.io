@@ -13,7 +13,7 @@ updates:
       time: "12:00"
       timezone: "Asia/Kathmandu"
     reviewers:
-      - "MilanAryal"
+      - "milanaryal"
 
   - package-ecosystem: "bundler"
     directory: "/"
@@ -23,7 +23,7 @@ updates:
       time: "12:00"
       timezone: "Asia/Kathmandu"
     reviewers:
-      - "MilanAryal"
+      - "milanaryal"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -33,4 +33,4 @@ updates:
       time: "12:00"
       timezone: "Asia/Kathmandu"
     reviewers:
-      - "MilanAryal"
+      - "milanaryal"

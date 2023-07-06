@@ -12,7 +12,7 @@ const banner = `/*!
  * Copyright ${dateObj.getFullYear()} ${pkg.author}
  * Licensed under ${
    pkg.license
- } (https://github.com/KshitizAryal/kshitizaryal.github.io/blob/main/LICENSE)
+ } (https://github.com/kshitizaryal/kshitizaryal.github.io/blob/main/LICENSE)
  */
 `
 
