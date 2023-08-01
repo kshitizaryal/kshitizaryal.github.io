@@ -57,7 +57,9 @@ body {
     content: "";
     background-color: #c2d0d7;
     opacity: 0;
-    transition: opacity 1.25s ease-in-out 0s, visibility 1.25s 0s;
+    transition:
+      opacity 1.25s ease-in-out 0s,
+      visibility 1.25s 0s;
   }
 
   // stylelint-disable selector-no-qualifying-type
@@ -300,7 +302,9 @@ body {
   }
 
   cursor: default;
-  transition: opacity 3s ease-in-out 0s, visibility 3s 0s;
+  transition:
+    opacity 3s ease-in-out 0s,
+    visibility 3s 0s;
 
   &.is-loading {
     visibility: hidden;
