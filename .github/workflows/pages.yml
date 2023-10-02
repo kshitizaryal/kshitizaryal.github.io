@@ -37,7 +37,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: "0.118.2"
+      HUGO_VERSION: "0.119.0"
 
     steps:
       - name: Install Hugo CLI
@@ -50,7 +50,7 @@ jobs:
           hugo version
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: recursive
 
