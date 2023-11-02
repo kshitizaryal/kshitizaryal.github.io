@@ -11,7 +11,7 @@
   };
 </script>
 
-{{ if and (.Site.GoogleAnalytics) (hugo.IsProduction) }}
+{{ if and (.Site.Config.Services.GoogleAnalytics.ID) (hugo.IsProduction) }}
   {{ template "_internal/google_analytics.html" . }}
 {{ end }}
 
