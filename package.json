@@ -36,25 +36,25 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@fontsource/jost": "^5.0.16",
+    "@fontsource/jost": "^5.0.17",
     "@fortawesome/fontawesome-free": "6.5.1",
     "normalize.css": "8.0.1",
     "reset.css": "^2.0.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.19",
     "browser-sync": "^3.0.2",
     "chokidar-cli": "^3.0.0",
     "cpy-cli": "^5.0.0",
-    "cssnano": "^6.0.3",
-    "hugo-bin": "^0.120.1",
+    "cssnano": "^6.1.1",
+    "hugo-bin": "^0.121.1",
     "linkinator": "^6.0.4",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
-    "sass": "^1.71.1",
+    "sass": "^1.72.0",
     "stylelint": "^16.2.1",
     "stylelint-config-twbs-bootstrap": "^14.0.0",
     "stylelint-prettier": "^5.0.0"
