@@ -36,7 +36,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@fontsource/jost": "^5.0.19",
+    "@fontsource/jost": "^5.1.0",
     "@fortawesome/fontawesome-free": "6.6.0",
     "normalize.css": "8.0.1",
     "reset.css": "^2.0.2"
@@ -47,16 +47,16 @@
     "browser-sync": "^3.0.2",
     "chokidar-cli": "^3.0.0",
     "cpy-cli": "^5.0.0",
-    "cssnano": "^7.0.5",
-    "hugo-bin": "^0.130.1",
+    "cssnano": "^7.0.6",
+    "hugo-bin": "^0.131.3",
     "linkinator": "^6.1.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "sass": "^1.77.8",
+    "sass": "^1.79.3",
     "stylelint": "^16.9.0",
-    "stylelint-config-twbs-bootstrap": "^14.2.0",
+    "stylelint-config-twbs-bootstrap": "^15.0.0",
     "stylelint-prettier": "^5.0.2"
   },
   "main": "_site/index.html",
